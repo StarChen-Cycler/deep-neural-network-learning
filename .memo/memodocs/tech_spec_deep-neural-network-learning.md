@@ -14,7 +14,7 @@
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | Python | 3.10+ | Programming language |
-| PyTorch | 2.x | Deep learning framework |
+| PyTorch | 2.4.1+cu124 | Deep learning framework (CUDA 12.4) |
 | NumPy | 2.x | Numerical computation (from-scratch implementations) |
 | Matplotlib | - | Visualization |
 | scikit-learn | - | Metrics, utilities |
@@ -25,6 +25,33 @@
 | pytest | Unit testing |
 | black | Code formatting |
 | mypy | Type checking |
+
+---
+
+## Hardware Configuration
+
+### Local Machine
+| Component | Specification |
+|-----------|---------------|
+| **GPU** | NVIDIA GeForce RTX 3050 Ti Laptop |
+| **VRAM** | 4 GB (limited) |
+| **Compute Capability** | 8.6 |
+| **Driver** | 560.94 |
+| **CPU** | AMD Ryzen 7 5800H (8 cores / 16 threads) |
+| **RAM** | 64 GB |
+
+### Conda Environments
+| Environment | PyTorch | CUDA | Notes |
+|-------------|---------|------|-------|
+| **chatterbox** | 2.4.1+cu124 | 12.4 | Recommended for AI training |
+| basicsr | 1.13.1 | 11.7 | Legacy environment |
+| poker | 2.3.1+cpu | - | CPU only |
+
+### Usage Guidelines
+- **Recommended env**: `conda activate chatterbox`
+- **VRAM is limited (4GB)**: Use mixed precision (`torch.cuda.amp`), gradient checkpointing
+- **Suitable for**: Fine-tuning small models, inference, learning/practice
+- **For large models**: Consider cloud GPUs or reduce batch size
 
 ---
 

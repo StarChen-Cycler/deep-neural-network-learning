@@ -27,9 +27,27 @@ This is an educational deep learning implementation project with 30 hands-on tas
 
 ### Tech Stack
 - Python 3.10+
-- PyTorch 2.x
+- PyTorch 2.4.1+cu124 (CUDA 12.4)
 - NumPy 2.x
 - pytest
+
+### Hardware
+| Component | Specification |
+|-----------|---------------|
+| GPU | NVIDIA GeForce RTX 3050 Ti Laptop (4GB VRAM) |
+| CPU | AMD Ryzen 7 5800H (8 cores / 16 threads) |
+| RAM | 64 GB |
+
+### Conda Environment
+```bash
+conda activate chatterbox  # Recommended for training
+```
+
+### Memory Optimization Tips (4GB VRAM)
+- Use mixed precision (`torch.cuda.amp`)
+- Enable gradient checkpointing
+- Reduce batch sizes
+- Use gradient accumulation
 
 ## Commands
 
