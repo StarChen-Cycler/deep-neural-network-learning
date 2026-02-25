@@ -1,0 +1,99 @@
+# Memo-dec Ignore Patterns
+# Add files and folders that should not be processed
+
+# Version control
+.git
+.github
+LICENSE
+.svn
+.hg
+
+
+# Dependencies and packages
+node_modules
+venv
+env
+__pycache__
+.pytest_cache
+
+# Build artifacts
+build
+dist
+out
+target
+*.o
+*.so
+*.dll
+*.exe
+*.md
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Images and binaries (non-code)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.ico
+*.pdf
+*.zip
+*.tar.gz
+*.mp3
+*.mp4
+*.json
+*.txt
+*.sh
+
+# AI-generated patterns (memo-dec --findignore)
+# The following patterns were automatically identified
+#
+# Folders
+*.egg-info/
+.env/
+.git/
+.hg/
+.idea/
+.memo/
+.memo/memodocs/
+.memo/memotree/
+.octie/
+.octie/cache/
+.octie/indexes/
+.pytest_cache/
+.svn/
+.tox/
+.vscode/
+__pycache__/
+build/
+dist/
+env/
+htmlcov/
+node_modules/
+venv/
+
+# Files
+*.bak.*
+*.pyc
+*.pyd
+*.pyo
+.coverage
+.gitignore
+.memoignore
+.project.bak*
