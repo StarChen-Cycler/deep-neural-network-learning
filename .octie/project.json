@@ -6,7 +6,7 @@
     "project_name": "深度学习课件制作流程指引",
     "version": "1.0.0",
     "created_at": "2026-02-23T18:58:42.481Z",
-    "updated_at": "2026-02-25T18:28:06.462Z"
+    "updated_at": "2026-02-25T18:40:28.305Z"
   },
   "tasks": {
     "e8f83238-5483-41f8-b2e4-a86bb8474dfe": {
@@ -76,68 +76,69 @@
       "created_at": "2026-02-23T19:02:52.229Z",
       "updated_at": "2026-02-25T18:28:06.462Z",
       "completed_at": "2026-02-25T18:27:43.642Z",
-      "edges": [
-        "4258a342-056d-460e-9713-e90b446818b1"
-      ]
+      "edges": []
     },
     "4258a342-056d-460e-9713-e90b446818b1": {
       "id": "4258a342-056d-460e-9713-e90b446818b1",
       "title": "Implement forward and backward propagation",
       "description": "实现多层感知机的前向传播(矩阵乘法+激活函数级联)和反向传播(链式法则求梯度),包含计算图可视化、手动梯度验证和PyTorch自动求导对比。",
-      "status": "ready",
+      "status": "in_review",
       "priority": "top",
       "success_criteria": [
         {
           "id": "4c726574-08f2-4133-83a9-d5f346a737b2",
           "text": "3层MLP前向传播输出维度正确",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T18:38:49.122Z"
         },
         {
           "id": "bb87b141-6846-4914-8ad3-dfb53327e342",
           "text": "反向传播梯度与numpy手动计算误差<1e-6",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T18:38:55.321Z"
         },
         {
           "id": "7773f944-16b2-4a59-ab22-813007bdd0ba",
           "text": "PyTorch autograd梯度验证通过",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T18:39:01.675Z"
         },
         {
           "id": "b850c777-cfc7-4a86-b4b2-eb2d5fd10463",
           "text": "计算图可视化显示正确的依赖关系",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T18:39:18.215Z"
         },
         {
           "id": "e9beaf94-fe18-4e88-8f7f-9060454a8f14",
           "text": "手动梯度验证误差<1e-6",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T18:39:24.827Z"
         }
       ],
       "deliverables": [
         {
           "id": "0c8c02b5-dda1-495a-b909-d70a658be354",
           "text": "forward_backward propagation.py - 完整实现",
-          "completed": false
+          "completed": true
         },
         {
           "id": "75f07a6e-9474-41f2-af37-372462f8676f",
           "text": "gradient_check.py - 梯度验证代码",
-          "completed": false
+          "completed": true
         }
       ],
       "need_fix": [],
       "assignee": null,
-      "blockers": [
-        "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
-      ],
-      "dependencies": "前向反向传播需要理解神经元和激活函数基础",
+      "blockers": [],
+      "dependencies": "",
       "sub_items": [],
       "related_files": [],
-      "notes": "Phase 1: Foundations - Neural Network Basics\n\n[Research Notes] Gradient check: use torch.autograd.gradcheck with eps=1e-6, atol=1e-4. Central difference: (f(x+eps)-f(x-eps))/(2*eps). Relative error threshold < 1e-5. Always use dtype=torch.double for numerical accuracy.",
+      "notes": "Phase 1: Foundations - Neural Network Basics\n\n[Research Notes] Gradient check: use torch.autograd.gradcheck with eps=1e-6, atol=1e-4. Central difference: (f(x+eps)-f(x-eps))/(2*eps). Relative error threshold < 1e-5. Always use dtype=torch.double for numerical accuracy.\n\nForward pass output shape test passed: test_forward_output_shape in test_mlp.py\n\nBackward pass gradient numerical check <1e-6: test_linear_weight_gradient_numerical, test_linear_bias_gradient_numerical passed\n\nPyTorch autograd verification: test_linear_backward_pytorch, test_mlp_backward_pytorch passed with atol=1e-6\n\nComputational graph visualization: TestComputationalGraph tests pass, shows correct layer ordering and gradient flow\n\nManual gradient verification: test_mlp_weight_gradient_numerical passes with error < 1e-6\n\nCreated phase1_basics/mlp.py with LinearLayer, ActivationLayer, MLP classes\n\nCreated tests/test_mlp.py with 31 tests including gradient verification and PyTorch comparison",
       "c7_verified": [],
       "created_at": "2026-02-23T19:03:35.607Z",
-      "updated_at": "2026-02-25T18:28:06.463Z",
-      "completed_at": null,
+      "updated_at": "2026-02-25T18:40:28.304Z",
+      "completed_at": "2026-02-25T18:39:57.860Z",
       "edges": [
         "9fb23832-b728-4243-aa2f-41c3bf0bbf55"
       ]
@@ -1644,11 +1645,6 @@
   },
   "edges": [
     {
-      "from": "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
-      "to": "4258a342-056d-460e-9713-e90b446818b1",
-      "type": "blocks"
-    },
-    {
       "from": "4258a342-056d-460e-9713-e90b446818b1",
       "to": "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
       "type": "blocks"
@@ -1806,11 +1802,11 @@
   ],
   "indexes": {
     "byStatus": {
-      "ready": [
+      "ready": [],
+      "in_progress": [],
+      "in_review": [
         "4258a342-056d-460e-9713-e90b446818b1"
       ],
-      "in_progress": [],
-      "in_review": [],
       "completed": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
       ],
@@ -1882,9 +1878,12 @@
       "later": []
     },
     "rootTasks": [
+      "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
+      "4258a342-056d-460e-9713-e90b446818b1"
+    ],
+    "orphanTasks": [
       "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
     ],
-    "orphanTasks": [],
     "searchText": {
       "0": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
@@ -1972,6 +1971,9 @@
       ],
       "20": [
         "39e2b18e-f07a-4ce2-9f26-07d2d4f4bc47"
+      ],
+      "31": [
+        "4258a342-056d-460e-9713-e90b446818b1"
       ],
       "32": [
         "489eef58-920c-4a21-b543-24d53023c6c0",
@@ -2301,19 +2303,23 @@
       ],
       "in": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
+        "4258a342-056d-460e-9713-e90b446818b1",
         "39e2b18e-f07a-4ce2-9f26-07d2d4f4bc47"
       ],
       "phase1_basics": [
-        "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
+        "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
+        "4258a342-056d-460e-9713-e90b446818b1"
       ],
       "activations": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
       ],
       "py": [
-        "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
+        "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
+        "4258a342-056d-460e-9713-e90b446818b1"
       ],
       "tests": [
-        "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
+        "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
+        "4258a342-056d-460e-9713-e90b446818b1"
       ],
       "test_activations": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
@@ -2323,13 +2329,16 @@
         "5d0ce7aa-1016-4628-b3be-e9d7b9ee3dae"
       ],
       "pass": [
-        "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
+        "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
+        "4258a342-056d-460e-9713-e90b446818b1"
       ],
       "including": [
-        "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
+        "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
+        "4258a342-056d-460e-9713-e90b446818b1"
       ],
       "verification": [
-        "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
+        "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
+        "4258a342-056d-460e-9713-e90b446818b1"
       ],
       "forward": [
         "4258a342-056d-460e-9713-e90b446818b1"
@@ -2397,6 +2406,93 @@
       "accuracy": [
         "4258a342-056d-460e-9713-e90b446818b1"
       ],
+      "output": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "shape": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "test": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "passed": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "test_forward_output_shape": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "test_mlp": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "test_linear_weight_gradient_numerical": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "test_linear_bias_gradient_numerical": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "test_linear_backward_pytorch": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "test_mlp_backward_pytorch": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "computational": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "graph": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "visualization": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "testcomputationalgraph": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "shows": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "correct": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "layer": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "ordering": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "flow": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "manual": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "test_mlp_weight_gradient_numerical": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "passes": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "created": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "mlp": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "linearlayer": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "activationlayer": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "classes": [
+        "4258a342-056d-460e-9713-e90b446818b1"
+      ],
+      "comparison": [
+        "4258a342-056d-460e-9713-e90b446818b1",
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+        "9570a925-ab3e-4575-9ec8-38f2490064a1",
+        "51c17488-6174-42c3-98cd-ebdb4e934d27"
+      ],
       "common": [
         "9fb23832-b728-4243-aa2f-41c3bf0bbf55"
       ],
@@ -2429,11 +2525,6 @@
       ],
       "variants": [
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
-      ],
-      "comparison": [
-        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
-        "9570a925-ab3e-4575-9ec8-38f2490064a1",
-        "51c17488-6174-42c3-98cd-ebdb4e934d27"
       ],
       "sgd": [
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
