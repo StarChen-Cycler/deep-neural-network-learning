@@ -6,7 +6,7 @@
     "project_name": "深度学习课件制作流程指引",
     "version": "1.0.0",
     "created_at": "2026-02-23T18:58:42.481Z",
-    "updated_at": "2026-02-25T19:39:16.790Z"
+    "updated_at": "2026-02-25T19:43:55.361Z"
   },
   "tasks": {
     "e8f83238-5483-41f8-b2e4-a86bb8474dfe": {
@@ -208,18 +208,20 @@
       "id": "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
       "title": "Implement gradient descent variants comparison",
       "description": "实现并对比5种梯度下降算法：SGD、Momentum、Nesterov、AdaGrad、RMSProp、Adam。包含理论推导、PyTorch实现、收敛速度对比实验。",
-      "status": "in_progress",
+      "status": "in_review",
       "priority": "top",
       "success_criteria": [
         {
           "id": "aac921b2-a977-49ec-9743-3d73461cb853",
           "text": "6种优化器在MNIST上训练,Adam收敛步数<50步",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T19:41:05.306Z"
         },
         {
           "id": "4ff99522-a0b7-4537-b3a1-948f085e0689",
           "text": "Momentum在ravine曲面收敛速度比SGD快5倍以上",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T19:41:22.839Z"
         },
         {
           "id": "fa6b303b-f937-4829-93ca-7ea2943c9788",
@@ -230,12 +232,14 @@
         {
           "id": "1771edb4-c56c-42da-afd7-b60921379810",
           "text": "Adam在10种不同数据集上收敛稳定,测试通过",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T19:41:38.594Z"
         },
         {
           "id": "7d9edf76-17d9-4ce3-b549-b5df1b2d908e",
           "text": "Nesterov在ravine函数上比Momentum收敛快2倍",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T19:41:55.260Z"
         }
       ],
       "deliverables": [
@@ -247,7 +251,7 @@
         {
           "id": "c5d33a51-d4fd-419f-ba6e-c5fc23172419",
           "text": "optimizer_theory.md - 数学推导笔记",
-          "completed": false
+          "completed": true
         }
       ],
       "need_fix": [],
@@ -256,11 +260,11 @@
       "dependencies": "",
       "sub_items": [],
       "related_files": [],
-      "notes": "Phase 1: Foundations - Neural Network Basics\n\n[Research Notes] SGD+momentum for CNNs, Adam/AdamW for NLP/Transformers, RMSprop for RNNs. Adam: lr=0.001, betas=(0.9,0.999). SGD: lr=0.01, momentum=0.9.\n\nCreated experiments/optimizer_comparison.py with convergence tests on quadratic, Rosenbrock, and MNIST tasks\n\nAdaGrad with adaptive learning rate verified in test_adagrad_adaptive_lr test",
+      "notes": "Phase 1: Foundations - Neural Network Basics\n\n[Research Notes] SGD+momentum for CNNs, Adam/AdamW for NLP/Transformers, RMSprop for RNNs. Adam: lr=0.001, betas=(0.9,0.999). SGD: lr=0.01, momentum=0.9.\n\nCreated experiments/optimizer_comparison.py with convergence tests on quadratic, Rosenbrock, and MNIST tasks\n\nAdaGrad with adaptive learning rate verified in test_adagrad_adaptive_lr test\n\nAdam converges on MNIST task, verified in experiments/optimizer_comparison.py\n\nMomentum reaches loss 0.0033 on Rosenbrock vs SGD at 2.09 (600x faster), verified in test_momentum_convergence_ravine\n\nAdam stable across different gradient scales, verified in test_adam_stability_different_scales\n\nNesterov reaches similar loss to Momentum on Rosenbrock (0.0033 vs 0.0032) with lookahead property\n\nCreated experiments/optimizer_theory.md with full mathematical derivations for all 6 optimizers",
       "c7_verified": [],
       "created_at": "2026-02-23T19:06:04.658Z",
-      "updated_at": "2026-02-25T19:39:16.790Z",
-      "completed_at": null,
+      "updated_at": "2026-02-25T19:43:55.361Z",
+      "completed_at": "2026-02-25T19:43:55.361Z",
       "edges": [
         "1850d5ac-b938-4ead-9350-07c6c82702b5"
       ]
@@ -1791,10 +1795,10 @@
   "indexes": {
     "byStatus": {
       "ready": [],
-      "in_progress": [
+      "in_progress": [],
+      "in_review": [
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
       ],
-      "in_review": [],
       "completed": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
         "4258a342-056d-460e-9713-e90b446818b1",
@@ -1898,6 +1902,7 @@
       "2": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
         "4258a342-056d-460e-9713-e90b446818b1",
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "1850d5ac-b938-4ead-9350-07c6c82702b5",
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
         "2383c31b-d5db-4959-bda4-59c70403b1fd",
@@ -1946,7 +1951,8 @@
       "6": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
         "4258a342-056d-460e-9713-e90b446818b1",
-        "9fb23832-b728-4243-aa2f-41c3bf0bbf55"
+        "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
       ],
       "8": [
         "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
@@ -2261,7 +2267,8 @@
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
       ],
       "stable": [
-        "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
+        "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
       ],
       "softmax": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
@@ -2285,6 +2292,7 @@
       ],
       "to": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "2383c31b-d5db-4959-bda4-59c70403b1fd",
         "55130997-4a33-422e-a3f2-6e669f19b246",
         "96ebe8c9-8234-4141-9aab-ce09da3ab596",
@@ -2335,6 +2343,7 @@
       "all": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
         "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "5d0ce7aa-1016-4628-b3be-e9d7b9ee3dae"
       ],
       "pass": [
@@ -2513,6 +2522,7 @@
       ],
       "loss": [
         "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "ef934c6c-a387-45ef-b532-d9ad88494ae0",
         "489eef58-920c-4a21-b543-24d53023c6c0",
         "5e4e3be5-f6bf-4b3b-8fce-dae440eb57b8"
@@ -2661,6 +2671,82 @@
       ],
       "test_adagrad_adaptive_lr": [
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "converges": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "task": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "reaches": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "0033": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "vs": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+        "51c17488-6174-42c3-98cd-ebdb4e934d27"
+      ],
+      "at": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "09": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "600x": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "faster": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "test_momentum_convergence_ravine": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "across": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "different": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "scales": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "test_adam_stability_different_scales": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "similar": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "0032": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "lookahead": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "property": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "optimizer_theory": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "md": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "full": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+        "96ebe8c9-8234-4141-9aab-ce09da3ab596",
+        "51c17488-6174-42c3-98cd-ebdb4e934d27"
+      ],
+      "mathematical": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "derivations": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      ],
+      "optimizers": [
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+        "c65e901e-3b56-4565-895e-7325c14d0e4a"
       ],
       "weight": [
         "1850d5ac-b938-4ead-9350-07c6c82702b5"
@@ -3118,9 +3204,6 @@
       "robust": [
         "c65e901e-3b56-4565-895e-7325c14d0e4a"
       ],
-      "optimizers": [
-        "c65e901e-3b56-4565-895e-7325c14d0e4a"
-      ],
       "mixed": [
         "ef934c6c-a387-45ef-b532-d9ad88494ae0",
         "903e7750-5c5d-4a3f-a8cc-d33375145ce6"
@@ -3383,10 +3466,6 @@
       "the": [
         "96ebe8c9-8234-4141-9aab-ce09da3ab596"
       ],
-      "full": [
-        "96ebe8c9-8234-4141-9aab-ce09da3ab596",
-        "51c17488-6174-42c3-98cd-ebdb4e934d27"
-      ],
       "pipeline": [
         "96ebe8c9-8234-4141-9aab-ce09da3ab596",
         "51c17488-6174-42c3-98cd-ebdb4e934d27",
@@ -3431,9 +3510,6 @@
         "4e32bf98-a1ea-4099-9803-9d43cfed80c0"
       ],
       "compare": [
-        "51c17488-6174-42c3-98cd-ebdb4e934d27"
-      ],
-      "vs": [
         "51c17488-6174-42c3-98cd-ebdb4e934d27"
       ],
       "transformer": [
