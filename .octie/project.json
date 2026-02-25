@@ -6,7 +6,7 @@
     "project_name": "深度学习课件制作流程指引",
     "version": "1.0.0",
     "created_at": "2026-02-23T18:58:42.481Z",
-    "updated_at": "2026-02-25T19:43:55.361Z"
+    "updated_at": "2026-02-25T20:03:46.053Z"
   },
   "tasks": {
     "e8f83238-5483-41f8-b2e4-a86bb8474dfe": {
@@ -208,7 +208,7 @@
       "id": "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
       "title": "Implement gradient descent variants comparison",
       "description": "实现并对比5种梯度下降算法：SGD、Momentum、Nesterov、AdaGrad、RMSProp、Adam。包含理论推导、PyTorch实现、收敛速度对比实验。",
-      "status": "in_review",
+      "status": "completed",
       "priority": "top",
       "success_criteria": [
         {
@@ -263,60 +263,59 @@
       "notes": "Phase 1: Foundations - Neural Network Basics\n\n[Research Notes] SGD+momentum for CNNs, Adam/AdamW for NLP/Transformers, RMSprop for RNNs. Adam: lr=0.001, betas=(0.9,0.999). SGD: lr=0.01, momentum=0.9.\n\nCreated experiments/optimizer_comparison.py with convergence tests on quadratic, Rosenbrock, and MNIST tasks\n\nAdaGrad with adaptive learning rate verified in test_adagrad_adaptive_lr test\n\nAdam converges on MNIST task, verified in experiments/optimizer_comparison.py\n\nMomentum reaches loss 0.0033 on Rosenbrock vs SGD at 2.09 (600x faster), verified in test_momentum_convergence_ravine\n\nAdam stable across different gradient scales, verified in test_adam_stability_different_scales\n\nNesterov reaches similar loss to Momentum on Rosenbrock (0.0033 vs 0.0032) with lookahead property\n\nCreated experiments/optimizer_theory.md with full mathematical derivations for all 6 optimizers",
       "c7_verified": [],
       "created_at": "2026-02-23T19:06:04.658Z",
-      "updated_at": "2026-02-25T19:43:55.361Z",
+      "updated_at": "2026-02-25T19:44:44.908Z",
       "completed_at": "2026-02-25T19:43:55.361Z",
-      "edges": [
-        "1850d5ac-b938-4ead-9350-07c6c82702b5"
-      ]
+      "edges": []
     },
     "1850d5ac-b938-4ead-9350-07c6c82702b5": {
       "id": "1850d5ac-b938-4ead-9350-07c6c82702b5",
       "title": "Implement weight initialization methods",
       "description": "实现5种权重初始化方法：Xavier(Glorot)、He、Kaiming、LSUV、Zero初始化。包含每种方法的理论依据、适用范围、PyTorch代码和对比实验。",
-      "status": "blocked",
+      "status": "completed",
       "priority": "top",
       "success_criteria": [
         {
           "id": "404ebbb9-d750-4aca-b8aa-22c9f1bcbc03",
           "text": "Xavier初始化后权重方差在输入输出维度比例范围内",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T19:58:35.275Z"
         },
         {
           "id": "50fd5f58-dc24-40fc-b615-7c1bb95c8e18",
           "text": "He初始化在ReLU网络方差保持,测试通过",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T19:58:58.348Z"
         },
         {
           "id": "75ea6002-c1d6-4d7a-83a4-807a35386b53",
           "text": "LSUV迭代次数<10次达到目标方差,测试通过",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-25T19:59:20.639Z"
         }
       ],
       "deliverables": [
         {
           "id": "c9b06e27-31a3-4115-bf1b-4ab25c904d7d",
           "text": "weight_init.py - 5种初始化方法实现",
-          "completed": false
+          "completed": true
         },
         {
           "id": "99984963-a68b-42fc-afb2-1cb897b79c0f",
           "text": "init_comparison.py - 方差传播验证实验",
-          "completed": false
+          "completed": true
         }
       ],
       "need_fix": [],
       "assignee": null,
-      "blockers": [
-        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
-      ],
-      "dependencies": "权重初始化需要在梯度下降框架内理解",
+      "blockers": [],
+      "dependencies": "",
       "sub_items": [],
       "related_files": [],
-      "notes": "Phase 1: Foundations - Neural Network Basics\n\n[Research Notes] Xavier for Sigmoid/Tanh: std=sqrt(2/(fan_in+fan_out)). He/Kaiming for ReLU: std=sqrt(2/fan_in). Zero init for weights causes symmetry problem - never use. Bias: small constant (0.01) or zeros.",
+      "notes": "Phase 1: Foundations - Neural Network Basics\n\n[Research Notes] Xavier for Sigmoid/Tanh: std=sqrt(2/(fan_in+fan_out)). He/Kaiming for ReLU: std=sqrt(2/fan_in). Zero init for weights causes symmetry problem - never use. Bias: small constant (0.01) or zeros.\n\nXavier variance test passed: variance in expected range [0.000772, 0.002315]\n\nHe init maintains ReLU variance stable: hidden layers [0.65, 0.68]\n\nLSUV converges in 1 iteration with 20% tolerance",
       "c7_verified": [],
       "created_at": "2026-02-23T19:06:36.934Z",
-      "updated_at": "2026-02-25T18:12:57.401Z",
-      "completed_at": null,
+      "updated_at": "2026-02-25T20:03:46.053Z",
+      "completed_at": "2026-02-25T20:00:12.044Z",
       "edges": [
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
         "2383c31b-d5db-4959-bda4-59c70403b1fd",
@@ -327,7 +326,7 @@
       "id": "8a9c3d66-8694-4a88-97fb-e84f824a6964",
       "title": "Implement CNN architecture from scratch",
       "description": "实现CNN核心组件：卷积层、池化层、全连接层。包含前向传播实现、感受野计算、参数数量统计、PyTorch模块封装。",
-      "status": "blocked",
+      "status": "ready",
       "priority": "top",
       "success_criteria": [
         {
@@ -369,7 +368,7 @@
       "notes": "Phase 2: Architecture - CNN\n\n[Research Notes] Conv2d: (in_channels, out_channels, kernel_size). Receptive field calculation. MaxPool2d for downsampling. Use He initialization for Conv layers with ReLU. BatchNorm2d after Conv before activation.",
       "c7_verified": [],
       "created_at": "2026-02-23T19:08:10.489Z",
-      "updated_at": "2026-02-25T18:14:36.841Z",
+      "updated_at": "2026-02-25T20:03:46.053Z",
       "completed_at": null,
       "edges": [
         "9570a925-ab3e-4575-9ec8-38f2490064a1",
@@ -381,7 +380,7 @@
       "id": "2383c31b-d5db-4959-bda4-59c70403b1fd",
       "title": "Implement RNN LSTM GRU from scratch",
       "description": "实现RNN、LSTM、GRU三种时序模型。包含前向传播、反向传播(through time)、门控机制原理、梯度裁剪、PyTorch nn.Module封装。",
-      "status": "blocked",
+      "status": "ready",
       "priority": "top",
       "success_criteria": [
         {
@@ -423,7 +422,7 @@
       "notes": "Phase 2: Architecture - RNN/LSTM/GRU\n\n[Research Notes] LSTM has cell state (c) and hidden state (h). GRU simpler (no cell state). BPTT for gradient computation. Use gradient clipping to prevent explosion. PyTorch: nn.LSTM, nn.GRU with batch_first=True.",
       "c7_verified": [],
       "created_at": "2026-02-23T19:08:40.476Z",
-      "updated_at": "2026-02-25T18:14:28.432Z",
+      "updated_at": "2026-02-25T20:03:46.053Z",
       "completed_at": null,
       "edges": [
         "51c17488-6174-42c3-98cd-ebdb4e934d27"
@@ -433,7 +432,7 @@
       "id": "55130997-4a33-422e-a3f2-6e669f19b246",
       "title": "Implement self-attention mechanism",
       "description": "实现Self-Attention、Multi-Head Attention、Position Encoding。包含QKV计算、缩放点积注意力、PyTorch实现、TransformerEncoderLayer封装。",
-      "status": "blocked",
+      "status": "ready",
       "priority": "top",
       "success_criteria": [
         {
@@ -475,7 +474,7 @@
       "notes": "Phase 2: Architecture - Self-Attention\n\n[Research Notes] Multi-head attention: Q,K,V linear transforms, reshape to (batch, heads, seq, d_k). Scaled dot-product: softmax(QK^T/sqrt(d_k))*V. Use mask for causal attention (decoder). Einsum or matmul both work.",
       "c7_verified": [],
       "created_at": "2026-02-23T19:09:00.978Z",
-      "updated_at": "2026-02-25T18:13:42.357Z",
+      "updated_at": "2026-02-25T20:03:46.053Z",
       "completed_at": null,
       "edges": [
         "51c17488-6174-42c3-98cd-ebdb4e934d27"
@@ -1647,11 +1646,6 @@
   },
   "edges": [
     {
-      "from": "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
-      "to": "1850d5ac-b938-4ead-9350-07c6c82702b5",
-      "type": "blocks"
-    },
-    {
       "from": "1850d5ac-b938-4ead-9350-07c6c82702b5",
       "to": "8a9c3d66-8694-4a88-97fb-e84f824a6964",
       "type": "blocks"
@@ -1794,21 +1788,21 @@
   ],
   "indexes": {
     "byStatus": {
-      "ready": [],
-      "in_progress": [],
-      "in_review": [
-        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      "ready": [
+        "8a9c3d66-8694-4a88-97fb-e84f824a6964",
+        "2383c31b-d5db-4959-bda4-59c70403b1fd",
+        "55130997-4a33-422e-a3f2-6e669f19b246"
       ],
+      "in_progress": [],
+      "in_review": [],
       "completed": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
         "4258a342-056d-460e-9713-e90b446818b1",
-        "9fb23832-b728-4243-aa2f-41c3bf0bbf55"
+        "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
       ],
       "blocked": [
-        "1850d5ac-b938-4ead-9350-07c6c82702b5",
-        "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-        "2383c31b-d5db-4959-bda4-59c70403b1fd",
-        "55130997-4a33-422e-a3f2-6e669f19b246",
         "9570a925-ab3e-4575-9ec8-38f2490064a1",
         "98c84ab1-3da6-490a-bd95-174a2a8e064f",
         "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
@@ -1873,12 +1867,14 @@
       "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
       "4258a342-056d-460e-9713-e90b446818b1",
       "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
-      "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+      "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+      "1850d5ac-b938-4ead-9350-07c6c82702b5"
     ],
     "orphanTasks": [
       "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
       "4258a342-056d-460e-9713-e90b446818b1",
-      "9fb23832-b728-4243-aa2f-41c3bf0bbf55"
+      "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
+      "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
     ],
     "searchText": {
       "0": [
@@ -1970,6 +1966,7 @@
         "39e2b18e-f07a-4ce2-9f26-07d2d4f4bc47"
       ],
       "20": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5",
         "39e2b18e-f07a-4ce2-9f26-07d2d4f4bc47"
       ],
       "31": [
@@ -1987,6 +1984,12 @@
       ],
       "50": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
+      ],
+      "65": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
+      ],
+      "68": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
       ],
       "999": [
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
@@ -2037,6 +2040,7 @@
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
         "4258a342-056d-460e-9713-e90b446818b1",
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+        "1850d5ac-b938-4ead-9350-07c6c82702b5",
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
         "2383c31b-d5db-4959-bda4-59c70403b1fd",
         "9570a925-ab3e-4575-9ec8-38f2490064a1",
@@ -2268,7 +2272,8 @@
       ],
       "stable": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
-        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
       ],
       "softmax": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
@@ -2317,6 +2322,7 @@
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
         "4258a342-056d-460e-9713-e90b446818b1",
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+        "1850d5ac-b938-4ead-9350-07c6c82702b5",
         "39e2b18e-f07a-4ce2-9f26-07d2d4f4bc47"
       ],
       "phase1_basics": [
@@ -2436,10 +2442,12 @@
       ],
       "test": [
         "4258a342-056d-460e-9713-e90b446818b1",
-        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
       ],
       "passed": [
-        "4258a342-056d-460e-9713-e90b446818b1"
+        "4258a342-056d-460e-9713-e90b446818b1",
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
       ],
       "test_forward_output_shape": [
         "4258a342-056d-460e-9713-e90b446818b1"
@@ -2673,7 +2681,8 @@
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
       ],
       "converges": [
-        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
       ],
       "task": [
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
@@ -2827,6 +2836,40 @@
       "zeros": [
         "1850d5ac-b938-4ead-9350-07c6c82702b5"
       ],
+      "variance": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
+      ],
+      "expected": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
+      ],
+      "range": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
+      ],
+      "000772": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
+      ],
+      "002315": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
+      ],
+      "maintains": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
+      ],
+      "hidden": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5",
+        "2383c31b-d5db-4959-bda4-59c70403b1fd",
+        "ef934c6c-a387-45ef-b532-d9ad88494ae0"
+      ],
+      "layers": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5",
+        "8a9c3d66-8694-4a88-97fb-e84f824a6964",
+        "39e2b18e-f07a-4ce2-9f26-07d2d4f4bc47"
+      ],
+      "iteration": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
+      ],
+      "tolerance": [
+        "1850d5ac-b938-4ead-9350-07c6c82702b5"
+      ],
       "cnn": [
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
         "96ebe8c9-8234-4141-9aab-ce09da3ab596",
@@ -2877,10 +2920,6 @@
       "conv": [
         "8a9c3d66-8694-4a88-97fb-e84f824a6964"
       ],
-      "layers": [
-        "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-        "39e2b18e-f07a-4ce2-9f26-07d2d4f4bc47"
-      ],
       "batchnorm2d": [
         "8a9c3d66-8694-4a88-97fb-e84f824a6964"
       ],
@@ -2923,10 +2962,6 @@
       ],
       "c": [
         "2383c31b-d5db-4959-bda4-59c70403b1fd"
-      ],
-      "hidden": [
-        "2383c31b-d5db-4959-bda4-59c70403b1fd",
-        "ef934c6c-a387-45ef-b532-d9ad88494ae0"
       ],
       "h": [
         "2383c31b-d5db-4959-bda4-59c70403b1fd"

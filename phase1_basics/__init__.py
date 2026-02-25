@@ -46,6 +46,21 @@ from .optimizer import (
     get_scheduler,
 )
 
+from .weight_init import (
+    xavier_uniform,
+    xavier_normal,
+    he_uniform,
+    he_normal,
+    kaiming_uniform,
+    kaiming_normal,
+    zero_init,
+    lsuv_init,
+    compute_fan,
+    get_initializer,
+    init_bias,
+    INITIALIZERS,
+)
+
 __all__ = [
     # Activations
     "sigmoid",
@@ -85,4 +100,17 @@ __all__ = [
     "CosineAnnealingLR",
     "get_optimizer",
     "get_scheduler",
+    # Weight initialization
+    "xavier_uniform",
+    "xavier_normal",
+    "he_uniform",
+    "he_normal",
+    "kaiming_uniform",
+    "kaiming_normal",
+    "zero_init",
+    "lsuv_init",
+    "compute_fan",
+    "get_initializer",
+    "init_bias",
+    "INITIALIZERS",
 ]
