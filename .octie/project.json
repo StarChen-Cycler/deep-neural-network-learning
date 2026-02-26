@@ -6,7 +6,7 @@
     "project_name": "深度学习课件制作流程指引",
     "version": "1.0.0",
     "created_at": "2026-02-23T18:58:42.481Z",
-    "updated_at": "2026-02-26T10:32:38.570Z"
+    "updated_at": "2026-02-26T10:36:41.502Z"
   },
   "tasks": {
     "e8f83238-5483-41f8-b2e4-a86bb8474dfe": {
@@ -396,11 +396,7 @@
       "created_at": "2026-02-23T19:08:10.489Z",
       "updated_at": "2026-02-26T09:39:42.350Z",
       "completed_at": "2026-02-25T20:43:09.882Z",
-      "edges": [
-        "9570a925-ab3e-4575-9ec8-38f2490064a1",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4",
-        "51c17488-6174-42c3-98cd-ebdb4e934d27"
-      ]
+      "edges": []
     },
     "2383c31b-d5db-4959-bda4-59c70403b1fd": {
       "id": "2383c31b-d5db-4959-bda4-59c70403b1fd",
@@ -451,15 +447,13 @@
       "created_at": "2026-02-23T19:08:40.476Z",
       "updated_at": "2026-02-26T10:11:28.068Z",
       "completed_at": "2026-02-26T10:07:14.688Z",
-      "edges": [
-        "51c17488-6174-42c3-98cd-ebdb4e934d27"
-      ]
+      "edges": []
     },
     "55130997-4a33-422e-a3f2-6e669f19b246": {
       "id": "55130997-4a33-422e-a3f2-6e669f19b246",
       "title": "Implement self-attention mechanism",
       "description": "实现Self-Attention、Multi-Head Attention、Position Encoding。包含QKV计算、缩放点积注意力、PyTorch实现、TransformerEncoderLayer封装。",
-      "status": "in_review",
+      "status": "completed",
       "priority": "top",
       "success_criteria": [
         {
@@ -502,11 +496,9 @@
       "notes": "Phase 2: Architecture - Self-Attention\n\n[Research Notes] Multi-head attention: Q,K,V linear transforms, reshape to (batch, heads, seq, d_k). Scaled dot-product: softmax(QK^T/sqrt(d_k))*V. Use mask for causal attention (decoder). Einsum or matmul both work.\n\nWeight init task completed, blocker removed.",
       "c7_verified": [],
       "created_at": "2026-02-23T19:09:00.978Z",
-      "updated_at": "2026-02-26T10:32:38.570Z",
+      "updated_at": "2026-02-26T10:34:03.987Z",
       "completed_at": "2026-02-26T10:32:38.570Z",
-      "edges": [
-        "51c17488-6174-42c3-98cd-ebdb4e934d27"
-      ]
+      "edges": []
     },
     "9570a925-ab3e-4575-9ec8-38f2490064a1": {
       "id": "9570a925-ab3e-4575-9ec8-38f2490064a1",
@@ -545,16 +537,14 @@
       ],
       "need_fix": [],
       "assignee": null,
-      "blockers": [
-        "8a9c3d66-8694-4a88-97fb-e84f824a6964"
-      ],
-      "dependencies": "归一化技术需要在CNN架构中应用",
+      "blockers": [],
+      "dependencies": "",
       "sub_items": [],
       "related_files": [],
       "notes": "Phase 3: Training Techniques - Normalization\n\n[Research Notes] BatchNorm: batch-dependent, for CNNs with large batches. LayerNorm: batch-independent, for Transformers/NLP. GroupNorm: batch-independent, for small batches (works with batch_size=1). InstanceNorm: for style transfer. SyncBatchNorm for multi-GPU.",
       "c7_verified": [],
       "created_at": "2026-02-23T19:09:37.813Z",
-      "updated_at": "2026-02-25T20:45:10.867Z",
+      "updated_at": "2026-02-26T10:35:47.634Z",
       "completed_at": null,
       "edges": [
         "98c84ab1-3da6-490a-bd95-174a2a8e064f"
@@ -1098,7 +1088,7 @@
       "id": "51c17488-6174-42c3-98cd-ebdb4e934d27",
       "title": "Compare CNN vs Transformer vs RNN architectures",
       "description": "对比CNN、Transformer、RNN三种架构在图像、文本、时序数据上的表现。包含参数数量、计算复杂度、适用场景、优缺点分析。",
-      "status": "blocked",
+      "status": "ready",
       "priority": "top",
       "success_criteria": [
         {
@@ -1131,18 +1121,14 @@
       ],
       "need_fix": [],
       "assignee": null,
-      "blockers": [
-        "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-        "2383c31b-d5db-4959-bda4-59c70403b1fd",
-        "55130997-4a33-422e-a3f2-6e669f19b246"
-      ],
-      "dependencies": "Architecture comparison also requires understanding Attention/Transformer for complete comparison",
+      "blockers": [],
+      "dependencies": "",
       "sub_items": [],
       "related_files": [],
       "notes": "Phase 5: Deployment - Architecture Comparison\n\nRATIONALE: RNN/Attention paths end here - CNN path demonstrates full training pipeline; RNN/Attention concepts can apply same techniques",
       "c7_verified": [],
       "created_at": "2026-02-23T19:17:49.924Z",
-      "updated_at": "2026-02-23T22:42:01.070Z",
+      "updated_at": "2026-02-26T10:36:41.501Z",
       "completed_at": null,
       "edges": [
         "766912e2-cca8-455b-8e51-6e3013fb658c"
@@ -1456,16 +1442,14 @@
       ],
       "need_fix": [],
       "assignee": null,
-      "blockers": [
-        "8a9c3d66-8694-4a88-97fb-e84f824a6964"
-      ],
-      "dependencies": "迁移学习需要CNN架构基础",
+      "blockers": [],
+      "dependencies": "",
       "sub_items": [],
       "related_files": [],
       "notes": "Phase 3/5: Training + Compression - Transfer Learning",
       "c7_verified": [],
       "created_at": "2026-02-23T19:20:48.842Z",
-      "updated_at": "2026-02-25T20:45:10.867Z",
+      "updated_at": "2026-02-26T10:35:58.101Z",
       "completed_at": null,
       "edges": [
         "4e32bf98-a1ea-4099-9803-9d43cfed80c0"
@@ -1704,31 +1688,6 @@
       "type": "blocks"
     },
     {
-      "from": "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-      "to": "9570a925-ab3e-4575-9ec8-38f2490064a1",
-      "type": "blocks"
-    },
-    {
-      "from": "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-      "to": "4a205408-4d91-4d81-bac0-9c076bec42c4",
-      "type": "blocks"
-    },
-    {
-      "from": "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-      "to": "51c17488-6174-42c3-98cd-ebdb4e934d27",
-      "type": "blocks"
-    },
-    {
-      "from": "2383c31b-d5db-4959-bda4-59c70403b1fd",
-      "to": "51c17488-6174-42c3-98cd-ebdb4e934d27",
-      "type": "blocks"
-    },
-    {
-      "from": "55130997-4a33-422e-a3f2-6e669f19b246",
-      "to": "51c17488-6174-42c3-98cd-ebdb4e934d27",
-      "type": "blocks"
-    },
-    {
       "from": "9570a925-ab3e-4575-9ec8-38f2490064a1",
       "to": "98c84ab1-3da6-490a-bd95-174a2a8e064f",
       "type": "blocks"
@@ -1833,12 +1792,11 @@
     "byStatus": {
       "ready": [
         "9570a925-ab3e-4575-9ec8-38f2490064a1",
+        "51c17488-6174-42c3-98cd-ebdb4e934d27",
         "4a205408-4d91-4d81-bac0-9c076bec42c4"
       ],
       "in_progress": [],
-      "in_review": [
-        "55130997-4a33-422e-a3f2-6e669f19b246"
-      ],
+      "in_review": [],
       "completed": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
         "4258a342-056d-460e-9713-e90b446818b1",
@@ -1846,7 +1804,8 @@
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "1850d5ac-b938-4ead-9350-07c6c82702b5",
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-        "2383c31b-d5db-4959-bda4-59c70403b1fd"
+        "2383c31b-d5db-4959-bda4-59c70403b1fd",
+        "55130997-4a33-422e-a3f2-6e669f19b246"
       ],
       "blocked": [
         "98c84ab1-3da6-490a-bd95-174a2a8e064f",
@@ -1859,7 +1818,6 @@
         "a0656c52-6958-4c86-ab26-b87f36c8d7e9",
         "67f0e6c6-fa16-4a5f-86be-8aa088f0d440",
         "4e32bf98-a1ea-4099-9803-9d43cfed80c0",
-        "51c17488-6174-42c3-98cd-ebdb4e934d27",
         "766912e2-cca8-455b-8e51-6e3013fb658c",
         "500cd8ab-2392-4979-a232-acb5c435337c",
         "e64d745b-7397-460d-859c-17f680e72d5b",
@@ -1910,9 +1868,15 @@
     "rootTasks": [
       "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
       "2383c31b-d5db-4959-bda4-59c70403b1fd",
+      "55130997-4a33-422e-a3f2-6e669f19b246",
+      "51c17488-6174-42c3-98cd-ebdb4e934d27",
+      "9570a925-ab3e-4575-9ec8-38f2490064a1",
+      "4a205408-4d91-4d81-bac0-9c076bec42c4"
+    ],
+    "orphanTasks": [
+      "2383c31b-d5db-4959-bda4-59c70403b1fd",
       "55130997-4a33-422e-a3f2-6e669f19b246"
     ],
-    "orphanTasks": [],
     "searchText": {
       "0": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
