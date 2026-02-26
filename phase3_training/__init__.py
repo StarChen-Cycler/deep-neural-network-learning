@@ -5,11 +5,14 @@ This module provides implementations of training techniques for deep learning:
     - Normalization: BatchNorm, LayerNorm, InstanceNorm, GroupNorm
     - Dropout: Standard, MC, Variational, Alpha, Spatial, DropConnect
     - Regularization: L1, L2, ElasticNet, MaxNorm, SpectralNorm
+    - LR Schedulers: Step, Exponential, Cosine, Cyclic, OneCycle, etc.
 
 Modules:
     normalization: 4 normalization techniques with forward/backward
     dropout: 6 dropout variants with train/eval modes
     regularization: Weight regularization methods
+    lr_scheduler: 11 learning rate scheduling strategies
+    scheduler_comparison: Optimization comparison experiments
 """
 
 from .normalization import (
@@ -48,6 +51,24 @@ from .regularization import (
     get_regularizer,
 )
 
+from .lr_scheduler import (
+    LRSchedulerBase,
+    StepLR,
+    ExponentialLR,
+    CosineAnnealingLR,
+    LinearWarmup,
+    CosineWarmup,
+    CyclicLR,
+    OneCycleLR,
+    ReduceLROnPlateau,
+    WarmupDecayScheduler,
+    CosineAnnealingWarmRestarts,
+    PolynomialLR,
+    get_scheduler,
+    plot_learning_rate_curve,
+    LR_SCHEDULERS,
+)
+
 __all__ = [
     # Normalization
     "BatchNorm1d",
@@ -79,4 +100,20 @@ __all__ = [
     "compute_regularization_loss",
     "REGULARIZATION_FUNCTIONS",
     "get_regularizer",
+    # LR Schedulers
+    "LRSchedulerBase",
+    "StepLR",
+    "ExponentialLR",
+    "CosineAnnealingLR",
+    "LinearWarmup",
+    "CosineWarmup",
+    "CyclicLR",
+    "OneCycleLR",
+    "ReduceLROnPlateau",
+    "WarmupDecayScheduler",
+    "CosineAnnealingWarmRestarts",
+    "PolynomialLR",
+    "get_scheduler",
+    "plot_learning_rate_curve",
+    "LR_SCHEDULERS",
 ]
