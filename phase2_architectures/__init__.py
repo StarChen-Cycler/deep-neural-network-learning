@@ -47,6 +47,16 @@ from .rnn_cells import (
     get_rnn_model,
 )
 
+from .attention import (
+    ScaledDotProductAttention,
+    MultiHeadAttention,
+    SinusoidalPositionalEncoding,
+    TransformerEncoderLayer,
+    create_causal_mask,
+    create_padding_mask,
+    count_parameters_attention,
+)
+
 __all__ = [
     # CNN Layers
     "Conv2d",
@@ -67,6 +77,11 @@ __all__ = [
     "RNN",
     "LSTM",
     "GRU",
+    # Attention
+    "ScaledDotProductAttention",
+    "MultiHeadAttention",
+    "SinusoidalPositionalEncoding",
+    "TransformerEncoderLayer",
     # Utility functions
     "conv2d_forward",
     "conv2d_backward",
@@ -80,4 +95,7 @@ __all__ = [
     "gradient_clip",
     "get_rnn_cell",
     "get_rnn_model",
+    "create_causal_mask",
+    "create_padding_mask",
+    "count_parameters_attention",
 ]

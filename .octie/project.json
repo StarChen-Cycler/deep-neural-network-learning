@@ -6,7 +6,7 @@
     "project_name": "深度学习课件制作流程指引",
     "version": "1.0.0",
     "created_at": "2026-02-23T18:58:42.481Z",
-    "updated_at": "2026-02-26T10:07:14.689Z"
+    "updated_at": "2026-02-26T10:32:38.570Z"
   },
   "tasks": {
     "e8f83238-5483-41f8-b2e4-a86bb8474dfe": {
@@ -406,7 +406,7 @@
       "id": "2383c31b-d5db-4959-bda4-59c70403b1fd",
       "title": "Implement RNN LSTM GRU from scratch",
       "description": "实现RNN、LSTM、GRU三种时序模型。包含前向传播、反向传播(through time)、门控机制原理、梯度裁剪、PyTorch nn.Module封装。",
-      "status": "in_review",
+      "status": "completed",
       "priority": "top",
       "success_criteria": [
         {
@@ -449,7 +449,7 @@
       "notes": "Phase 2: Architecture - RNN/LSTM/GRU\n\n[Research Notes] LSTM has cell state (c) and hidden state (h). GRU simpler (no cell state). BPTT for gradient computation. Use gradient clipping to prevent explosion. PyTorch: nn.LSTM, nn.GRU with batch_first=True.\n\nWeight init task completed, blocker removed.",
       "c7_verified": [],
       "created_at": "2026-02-23T19:08:40.476Z",
-      "updated_at": "2026-02-26T10:07:14.688Z",
+      "updated_at": "2026-02-26T10:11:28.068Z",
       "completed_at": "2026-02-26T10:07:14.688Z",
       "edges": [
         "51c17488-6174-42c3-98cd-ebdb4e934d27"
@@ -459,35 +459,38 @@
       "id": "55130997-4a33-422e-a3f2-6e669f19b246",
       "title": "Implement self-attention mechanism",
       "description": "实现Self-Attention、Multi-Head Attention、Position Encoding。包含QKV计算、缩放点积注意力、PyTorch实现、TransformerEncoderLayer封装。",
-      "status": "ready",
+      "status": "in_review",
       "priority": "top",
       "success_criteria": [
         {
           "id": "708e8259-7afd-4000-81ea-2cd11b272ad6",
           "text": "Multi-Head输出维度与输入一致(batch,seq,hidden)",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-26T10:30:58.473Z"
         },
         {
           "id": "bb320b5c-8dcf-4943-9609-9cbd021b4b47",
           "text": "4头注意力每个头独立,参数不共享,测试通过",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-26T10:31:23.845Z"
         },
         {
           "id": "22dafdc2-8825-4d04-afd6-8a59d9385443",
           "text": "Sinusoidal位置编码在seq=100内唯一可区分,测试通过",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-26T10:31:35.027Z"
         }
       ],
       "deliverables": [
         {
           "id": "cb565648-941f-4cbb-a8ed-bd1a932c649f",
           "text": "attention.py - Self-Attention实现",
-          "completed": false
+          "completed": true
         },
         {
           "id": "f818f4af-3e7b-441b-be39-5566def70166",
           "text": "transformer_layer.py - TransformerEncoderLayer",
-          "completed": false
+          "completed": true
         }
       ],
       "need_fix": [],
@@ -499,8 +502,8 @@
       "notes": "Phase 2: Architecture - Self-Attention\n\n[Research Notes] Multi-head attention: Q,K,V linear transforms, reshape to (batch, heads, seq, d_k). Scaled dot-product: softmax(QK^T/sqrt(d_k))*V. Use mask for causal attention (decoder). Einsum or matmul both work.\n\nWeight init task completed, blocker removed.",
       "c7_verified": [],
       "created_at": "2026-02-23T19:09:00.978Z",
-      "updated_at": "2026-02-25T20:49:05.864Z",
-      "completed_at": null,
+      "updated_at": "2026-02-26T10:32:38.570Z",
+      "completed_at": "2026-02-26T10:32:38.570Z",
       "edges": [
         "51c17488-6174-42c3-98cd-ebdb4e934d27"
       ]
@@ -1829,13 +1832,12 @@
   "indexes": {
     "byStatus": {
       "ready": [
-        "55130997-4a33-422e-a3f2-6e669f19b246",
         "9570a925-ab3e-4575-9ec8-38f2490064a1",
         "4a205408-4d91-4d81-bac0-9c076bec42c4"
       ],
       "in_progress": [],
       "in_review": [
-        "2383c31b-d5db-4959-bda4-59c70403b1fd"
+        "55130997-4a33-422e-a3f2-6e669f19b246"
       ],
       "completed": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
@@ -1843,7 +1845,8 @@
         "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "1850d5ac-b938-4ead-9350-07c6c82702b5",
-        "8a9c3d66-8694-4a88-97fb-e84f824a6964"
+        "8a9c3d66-8694-4a88-97fb-e84f824a6964",
+        "2383c31b-d5db-4959-bda4-59c70403b1fd"
       ],
       "blocked": [
         "98c84ab1-3da6-490a-bd95-174a2a8e064f",
