@@ -1,0 +1,138 @@
+{
+  "complexity": {
+    "cnn": {
+      "parameters": 93696,
+      "flops_32x32": 746496,
+      "complexity": "O(n * k^2 * c_in * c_out)"
+    },
+    "lstm": {
+      "seq_50": {
+        "parameters": 232714,
+        "flops": 5171200
+      },
+      "seq_100": {
+        "parameters": 232714,
+        "flops": 10342400
+      },
+      "seq_500": {
+        "parameters": 232714,
+        "flops": 51712000
+      },
+      "seq_1000": {
+        "parameters": 232714,
+        "flops": 103424000
+      },
+      "complexity": "O(n * d^2) - Linear in sequence length"
+    },
+    "transformer": {
+      "seq_50": {
+        "parameters": 405002,
+        "flops": 20940800
+      },
+      "seq_100": {
+        "parameters": 405002,
+        "flops": 44441600
+      },
+      "seq_500": {
+        "parameters": 405002,
+        "flops": 324608000
+      },
+      "seq_1000": {
+        "parameters": 405002,
+        "flops": 905216000
+      },
+      "complexity": "O(n^2 * d) - Quadratic in sequence length"
+    }
+  },
+  "forward_pass": {
+    "cnn": {
+      "forward_time_ms": 205.4147666397815,
+      "batch_size": 32
+    },
+    "lstm": {
+      "seq_50": {
+        "forward_time_ms": 62.402300032166146
+      },
+      "seq_100": {
+        "forward_time_ms": 134.43583335417011
+      },
+      "seq_200": {
+        "forward_time_ms": 339.21246669099975
+      }
+    },
+    "transformer": {
+      "seq_50": {
+        "forward_time_ms": 367.35643333910656
+      },
+      "seq_100": {
+        "forward_time_ms": 135.86256664711982
+      },
+      "seq_200": {
+        "forward_time_ms": 518.7288999635106
+      }
+    }
+  },
+  "image": {
+    "cnn": {
+      "parameters": 93696,
+      "forward_time_ms": 705.4240667105963,
+      "inductive_bias": "High (translation invariance, locality)",
+      "data_efficiency": "High - works well with small datasets"
+    },
+    "transformer": {
+      "parameters": 103178,
+      "forward_time_ms": 305.21106665643555,
+      "inductive_bias": "Low - learns everything from data",
+      "data_efficiency": "Low - needs large datasets (ImageNet-21K+)"
+    },
+    "comparison": {
+      "cnn_better_when": [
+        "Small dataset (<100K images)",
+        "Limited compute",
+        "Need interpretable features"
+      ],
+      "transformer_better_when": [
+        "Large dataset (>1M images)",
+        "Pre-training available",
+        "Need global context"
+      ]
+    }
+  },
+  "sequence": {
+    "seq_50": {
+      "lstm": {
+        "params": 232714,
+        "time_ms": 123.29970001398276
+      },
+      "transformer": {
+        "params": 405002,
+        "time_ms": 361.43510004815954
+      }
+    },
+    "seq_100": {
+      "lstm": {
+        "params": 232714,
+        "time_ms": 303.241066634655
+      },
+      "transformer": {
+        "params": 405002,
+        "time_ms": 460.44723340310156
+      }
+    },
+    "seq_200": {
+      "lstm": {
+        "params": 232714,
+        "time_ms": 383.5156333710377
+      },
+      "transformer": {
+        "params": 405002,
+        "time_ms": 804.5427666511387
+      }
+    },
+    "complexity": {
+      "lstm": "O(n * d^2)",
+      "transformer": "O(n^2 * d)",
+      "crossover_point": "~1000 tokens"
+    }
+  }
+}
