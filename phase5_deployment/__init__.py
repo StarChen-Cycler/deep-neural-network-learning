@@ -169,6 +169,85 @@ from .pruning_experiments import (
     PRUNING_EXPERIMENTS_COMPONENTS,
 )
 
+from .quantization import (
+    # Enums
+    QuantizationType,
+    QuantizationDtype,
+    ObserverType,
+    # Config
+    QuantizationConfig,
+    # Base
+    BaseQuantizer,
+    # Quantizers
+    DynamicQuantizer,
+    StaticQuantizer,
+    QATQuantizer,
+    INT4Quantizer,
+    # Manager
+    QuantizationManager,
+    # Utilities
+    create_quantizer,
+    quantize_model,
+    get_quantized_model_size,
+    # Registry
+    QUANTIZATION_COMPONENTS,
+)
+
+from .quantization_experiments import (
+    # Results
+    QuantizationResult,
+    CalibrationResult,
+    ExperimentReport,
+    # Experiments
+    QuantizationTypeComparison,
+    PrecisionComparisonExperiment,
+    CalibrationExperiment,
+    InferenceBenchmark,
+    CompleteQuantizationExperiment,
+    # Utilities
+    evaluate_model as quant_evaluate_model,
+    measure_inference_time as quant_measure_inference_time,
+    run_all_quantization_experiments,
+    # Registry
+    QUANTIZATION_EXPERIMENTS_COMPONENTS,
+)
+
+from .checkpoint_manager import (
+    # Enums
+    CheckpointPolicy,
+    # Config
+    CheckpointConfig,
+    # State
+    CheckpointState,
+    # Manager
+    CheckpointManager,
+    # Trainer
+    ResumeTrainer,
+    # Utilities
+    create_checkpoint_manager,
+    save_checkpoint,
+    load_checkpoint,
+    verify_gradient_consistency,
+    # Registry
+    CHECKPOINT_COMPONENTS,
+)
+
+from .resume_training import (
+    # Config
+    TrainingConfig,
+    # Models
+    SimpleMLP,
+    SimpleCNN,
+    # Pipeline
+    ResumeTrainingPipeline,
+    # Utilities
+    create_mnist_dataloaders,
+    train_mnist_with_checkpoint,
+    verify_checkpoint_resume_consistency,
+    # Registry
+    RESUME_TRAINING_COMPONENTS,
+)
+
 __all__ = [
     # DDP Setup
     "setup_ddp",
@@ -276,4 +355,24 @@ __all__ = [
     "measure_inference_time",
     "run_all_experiments",
     "PRUNING_EXPERIMENTS_COMPONENTS",
+    # Checkpoint Manager
+    "CheckpointPolicy",
+    "CheckpointConfig",
+    "CheckpointState",
+    "CheckpointManager",
+    "ResumeTrainer",
+    "create_checkpoint_manager",
+    "save_checkpoint",
+    "load_checkpoint",
+    "verify_gradient_consistency",
+    "CHECKPOINT_COMPONENTS",
+    # Resume Training
+    "TrainingConfig",
+    "SimpleMLP",
+    "SimpleCNN",
+    "ResumeTrainingPipeline",
+    "create_mnist_dataloaders",
+    "train_mnist_with_checkpoint",
+    "verify_checkpoint_resume_consistency",
+    "RESUME_TRAINING_COMPONENTS",
 ]
