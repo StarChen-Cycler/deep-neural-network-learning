@@ -6,12 +6,14 @@ This module provides advanced training utilities:
     - Mixed precision training (FP16/BF16/TF32)
     - Training debugging and monitoring
     - NaN loss debugging and recovery
-    - Early stopping
+    - TensorBoard and WandB visualization
 
 Modules:
     gradient_stability: Gradient clipping, flow analysis, vanishing/explosion detection
     mixed_precision: AMP training, GradScaler, precision detection
     nan_debugger: NaN detection, training stability monitoring, auto recovery
+    training_monitor: Unified training monitoring for gradients, activations, weights
+    tensorboard_debug: TensorBoard and WandB integration for PyTorch
 """
 
 from .gradient_stability import (
@@ -70,6 +72,36 @@ from .nan_debugger import (
     NAN_DEBUGGER_COMPONENTS,
 )
 
+from .training_monitor import (
+    # Core class
+    TrainingMonitor,
+    # Reports
+    GradientReport,
+    ActivationReport,
+    WeightUpdateReport,
+    TrainingSnapshot,
+    # Enum
+    MonitorStatus,
+    # Utilities
+    compute_gradient_histogram,
+    detect_dead_neurons,
+    compute_activation_distribution,
+    # Constants
+    TRAINING_MONITOR_COMPONENTS,
+)
+
+from .tensorboard_debug import (
+    # Monitors
+    TensorBoardMonitor,
+    WandBMonitor,
+    DualMonitor,
+    # Utilities
+    create_monitor,
+    quick_visualize,
+    # Constants
+    TENSORBOARD_DEBUG_COMPONENTS,
+)
+
 __all__ = [
     # Clipping
     "clip_grad_norm",
@@ -112,4 +144,22 @@ __all__ = [
     "detect_anomaly",
     "get_nan_debugger",
     "NAN_DEBUGGER_COMPONENTS",
+    # Training Monitor
+    "TrainingMonitor",
+    "GradientReport",
+    "ActivationReport",
+    "WeightUpdateReport",
+    "TrainingSnapshot",
+    "MonitorStatus",
+    "compute_gradient_histogram",
+    "detect_dead_neurons",
+    "compute_activation_distribution",
+    "TRAINING_MONITOR_COMPONENTS",
+    # TensorBoard/WandB Debug
+    "TensorBoardMonitor",
+    "WandBMonitor",
+    "DualMonitor",
+    "create_monitor",
+    "quick_visualize",
+    "TENSORBOARD_DEBUG_COMPONENTS",
 ]
