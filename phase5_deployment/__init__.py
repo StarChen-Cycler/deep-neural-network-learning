@@ -4,6 +4,7 @@ Phase 5: Optimization & Deployment
 This module provides optimization and deployment utilities:
     - Distributed training (DDP, DataParallel)
     - Multi-GPU configuration
+    - Gradient accumulation
     - Model pruning and quantization
     - ONNX export
     - TensorRT optimization
@@ -12,6 +13,7 @@ This module provides optimization and deployment utilities:
 Modules:
     ddp_training: DDP setup, DistributedTrainer, gradient sync verification
     multi_gpu: GPU detection, DataParallel wrapper, memory management
+    gradient_accumulation: Memory-efficient training with gradient accumulation
 """
 
 from .ddp_training import (
@@ -61,7 +63,7 @@ from .multi_gpu import (
     to_device,
     set_cuda_device,
     # Memory
-    get_memory_usage,
+    get_memory_usage as multi_gpu_get_memory_usage,
     clear_cuda_cache,
     # Config
     MultiGPUConfig,
@@ -69,6 +71,23 @@ from .multi_gpu import (
     get_lightning_strategy,
     # Registry
     MULTI_GPU_COMPONENTS,
+)
+
+from .gradient_accumulation import (
+    # Config
+    GradientAccumulationConfig,
+    # Core
+    GradientAccumulator,
+    # Trainer
+    GradientAccumulationTrainer,
+    # Utilities
+    get_memory_usage,
+    reset_memory_stats,
+    benchmark_memory_usage,
+    verify_gradient_equivalence,
+    calculate_memory_savings,
+    create_gradient_accumulation_trainer,
+    recommend_accumulation_settings,
 )
 
 __all__ = [
@@ -115,7 +134,7 @@ __all__ = [
     "to_device",
     "set_cuda_device",
     # Multi-GPU Memory
-    "get_memory_usage",
+    "multi_gpu_get_memory_usage",
     "clear_cuda_cache",
     # Multi-GPU Config
     "MultiGPUConfig",
@@ -123,4 +142,15 @@ __all__ = [
     "get_lightning_strategy",
     # Multi-GPU Registry
     "MULTI_GPU_COMPONENTS",
+    # Gradient Accumulation
+    "GradientAccumulationConfig",
+    "GradientAccumulator",
+    "GradientAccumulationTrainer",
+    "get_memory_usage",
+    "reset_memory_stats",
+    "benchmark_memory_usage",
+    "verify_gradient_equivalence",
+    "calculate_memory_savings",
+    "create_gradient_accumulation_trainer",
+    "recommend_accumulation_settings",
 ]
