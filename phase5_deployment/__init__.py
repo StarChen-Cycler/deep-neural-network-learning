@@ -5,6 +5,7 @@ This module provides optimization and deployment utilities:
     - Distributed training (DDP, DataParallel)
     - Multi-GPU configuration
     - Gradient accumulation
+    - Memory optimization (checkpointing, offloading)
     - Model pruning and quantization
     - ONNX export
     - TensorRT optimization
@@ -14,6 +15,7 @@ Modules:
     ddp_training: DDP setup, DistributedTrainer, gradient sync verification
     multi_gpu: GPU detection, DataParallel wrapper, memory management
     gradient_accumulation: Memory-efficient training with gradient accumulation
+    memory_optimizer: Gradient checkpointing, CPU offloading, memory-efficient attention
 """
 
 from .ddp_training import (
@@ -90,6 +92,36 @@ from .gradient_accumulation import (
     recommend_accumulation_settings,
 )
 
+from .memory_optimizer import (
+    # Config
+    MemoryOptimizationConfig,
+    # Memory Utilities
+    get_memory_usage as optimizer_get_memory_usage,
+    reset_memory_stats as optimizer_reset_memory_stats,
+    get_peak_memory,
+    clear_cuda_cache as optimizer_clear_cuda_cache,
+    # Gradient Checkpointing
+    get_checkpoint_segments,
+    CheckpointedSequential,
+    apply_gradient_checkpointing,
+    # CPU Offloading
+    CPUOffloader,
+    OffloadedOptimizer,
+    # Activation Recomputation
+    ActivationRecomputer,
+    # Memory Efficient Attention
+    memory_efficient_attention,
+    # In-place Operations
+    enable_inplace_activation,
+    # Trainer
+    MemoryOptimizedTrainer,
+    # Benchmarking
+    benchmark_memory,
+    compare_memory_strategies,
+    # Registry
+    MEMORY_OPTIMIZER_COMPONENTS,
+)
+
 __all__ = [
     # DDP Setup
     "setup_ddp",
@@ -146,11 +178,26 @@ __all__ = [
     "GradientAccumulationConfig",
     "GradientAccumulator",
     "GradientAccumulationTrainer",
-    "get_memory_usage",
-    "reset_memory_stats",
     "benchmark_memory_usage",
     "verify_gradient_equivalence",
     "calculate_memory_savings",
     "create_gradient_accumulation_trainer",
     "recommend_accumulation_settings",
+    # Memory Optimization
+    "MemoryOptimizationConfig",
+    "get_memory_usage",
+    "reset_memory_stats",
+    "get_peak_memory",
+    "get_checkpoint_segments",
+    "CheckpointedSequential",
+    "apply_gradient_checkpointing",
+    "CPUOffloader",
+    "OffloadedOptimizer",
+    "ActivationRecomputer",
+    "memory_efficient_attention",
+    "enable_inplace_activation",
+    "MemoryOptimizedTrainer",
+    "benchmark_memory",
+    "compare_memory_strategies",
+    "MEMORY_OPTIMIZER_COMPONENTS",
 ]
