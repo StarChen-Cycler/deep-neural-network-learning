@@ -45,10 +45,19 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Octie
-.octie/cache/
-.octie/indexes/
-*.bak
+# Octie (local only)
+.octie/
+
+# Claude Code (local only)
+.claude/
+.memo/
+CLAUDE.md
+
+# Project tools (local only)
+extract_blockers.js
+file_timestamp.md
+spec_file-timestamp-tracker.md
+track-files.js
 
 # Logs
 *.log
