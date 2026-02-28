@@ -6,7 +6,7 @@
     "project_name": "深度学习课件制作流程指引",
     "version": "1.0.0",
     "created_at": "2026-02-23T18:58:42.481Z",
-    "updated_at": "2026-02-28T07:44:05.699Z"
+    "updated_at": "2026-02-28T08:13:05.930Z"
   },
   "tasks": {
     "e8f83238-5483-41f8-b2e4-a86bb8474dfe": {
@@ -649,7 +649,7 @@
       "id": "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
       "title": "Implement learning rate schedulers",
       "description": "实现5种学习率调度策略：StepLR、CosineAnnealing、Warmup、CyclicLR、OneCycleLR。包含PyTorch实现、曲线可视化、收敛效果对比。",
-      "status": "in_review",
+      "status": "completed",
       "priority": "top",
       "success_criteria": [
         {
@@ -694,7 +694,7 @@
       "notes": "Phase 3: Training Techniques - LR Scheduling\n\nStepLR implemented with step_size and gamma parameters. At step 30 with gamma=0.1, lr becomes 0.1 * 0.1 = 0.01 (10% of original).\n\nCosineAnnealingLR at T_max=100, step 100: lr = eta_min + (base_lr - eta_min) * (1 + cos(pi)) / 2 = eta_min ≈ 0\n\nOneCycleLR with max_lr=0.01 implemented. Peak LR reaches exactly 0.01 during warmup phase (pct_start=0.3). Tests verify max_lr_seen = 0.01.\n\n11 LR scheduler variants implemented in lr_scheduler.py\n\n11 LR scheduler variants implemented: StepLR, ExponentialLR, CosineAnnealingLR, LinearWarmup, CosineWarmup, CyclicLR, OneCycleLR, ReduceLROnPlateau, WarmupDecayScheduler, CosineAnnealingWarmRestarts, PolynomialLR. Tests pass with PyTorch comparison.",
       "c7_verified": [],
       "created_at": "2026-02-23T19:10:43.977Z",
-      "updated_at": "2026-02-26T14:39:36.296Z",
+      "updated_at": "2026-02-28T07:50:58.653Z",
       "completed_at": "2026-02-26T14:39:36.296Z",
       "edges": [
         "c65e901e-3b56-4565-895e-7325c14d0e4a"
@@ -704,35 +704,38 @@
       "id": "c65e901e-3b56-4565-895e-7325c14d0e4a",
       "title": "Fix gradient vanishing and explosion",
       "description": "讲解梯度消失和梯度爆炸的成因、检测方法、解决方案。包含梯度裁剪、残差连接、门控机制、初始化策略。实验验证10层网络训练稳定性。",
-      "status": "blocked",
+      "status": "in_review",
       "priority": "top",
       "success_criteria": [
         {
           "id": "f883a6ef-b9f4-4184-8cbf-465162e4ab52",
           "text": "梯度裁剪norm_type=2, max_norm=1.0时,梯度范数<=1.0",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-28T08:09:08.463Z"
         },
         {
           "id": "171dd61d-4e6f-4984-84aa-e146d8ddb0a9",
           "text": "ResNet 10层残差网络在100层深时梯度范数>0.1",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-28T08:09:18.691Z"
         },
         {
           "id": "efe34294-e1b3-4db1-be29-044e763117f2",
           "text": "LSTM 10层网络梯度范数>0.01,无梯度消失",
-          "completed": false
+          "completed": true,
+          "completed_at": "2026-02-28T08:09:31.647Z"
         }
       ],
       "deliverables": [
         {
           "id": "ff493ffe-b77c-4318-a7a8-2d948621af6d",
           "text": "gradient_stability.py - 梯度诊断与解决方案",
-          "completed": false
+          "completed": true
         },
         {
           "id": "4dc4d073-adf4-4afd-b3f4-532077d70332",
           "text": "deep_network.py - 10层MLP/CNN实验",
-          "completed": false
+          "completed": true
         }
       ],
       "need_fix": [],
@@ -746,8 +749,8 @@
       "notes": "Phase 3: Training Techniques - Gradient Stability\n\n[Research Notes] Vanishing gradient solutions: BatchNorm, ReLU/GELU (avoid Sigmoid/Tanh), residual connections, proper init (He for ReLU). Exploding gradient solutions: gradient clipping, lower LR, robust optimizers (Adam).",
       "c7_verified": [],
       "created_at": "2026-02-23T19:11:50.729Z",
-      "updated_at": "2026-02-25T18:13:57.973Z",
-      "completed_at": null,
+      "updated_at": "2026-02-28T08:13:05.930Z",
+      "completed_at": "2026-02-28T08:13:05.930Z",
       "edges": [
         "ef934c6c-a387-45ef-b532-d9ad88494ae0",
         "7be5a818-7e9a-47b0-a247-208860d7cd91",
@@ -1134,7 +1137,7 @@
       "id": "51c17488-6174-42c3-98cd-ebdb4e934d27",
       "title": "Compare CNN vs Transformer vs RNN architectures",
       "description": "对比CNN、Transformer、RNN三种架构在图像、文本、时序数据上的表现。包含参数数量、计算复杂度、适用场景、优缺点分析。",
-      "status": "in_review",
+      "status": "completed",
       "priority": "top",
       "success_criteria": [
         {
@@ -1181,7 +1184,7 @@
       "notes": "Phase 5: Deployment - Architecture Comparison\n\nRATIONALE: RNN/Attention paths end here - CNN path demonstrates full training pipeline; RNN/Attention concepts can apply same techniques\n\nStarting implementation. Analyzing existing CNN/RNN/Attention implementations to build comparison framework.",
       "c7_verified": [],
       "created_at": "2026-02-23T19:17:49.924Z",
-      "updated_at": "2026-02-26T15:26:52.140Z",
+      "updated_at": "2026-02-28T07:51:14.029Z",
       "completed_at": "2026-02-26T15:26:52.139Z",
       "edges": [
         "766912e2-cca8-455b-8e51-6e3013fb658c"
@@ -1191,7 +1194,7 @@
       "id": "766912e2-cca8-455b-8e51-6e3013fb658c",
       "title": "Optimize model for edge deployment",
       "description": "实现边缘设备模型优化。包含TensorRT加速、NCNN移动端部署、量化INT8、算子融合、内存优化。",
-      "status": "blocked",
+      "status": "ready",
       "priority": "top",
       "success_criteria": [
         {
@@ -1871,11 +1874,12 @@
   ],
   "indexes": {
     "byStatus": {
-      "ready": [],
+      "ready": [
+        "766912e2-cca8-455b-8e51-6e3013fb658c"
+      ],
       "in_progress": [],
       "in_review": [
-        "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
-        "51c17488-6174-42c3-98cd-ebdb4e934d27"
+        "c65e901e-3b56-4565-895e-7325c14d0e4a"
       ],
       "completed": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
@@ -1888,10 +1892,11 @@
         "55130997-4a33-422e-a3f2-6e669f19b246",
         "9570a925-ab3e-4575-9ec8-38f2490064a1",
         "98c84ab1-3da6-490a-bd95-174a2a8e064f",
+        "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
+        "51c17488-6174-42c3-98cd-ebdb4e934d27",
         "4a205408-4d91-4d81-bac0-9c076bec42c4"
       ],
       "blocked": [
-        "c65e901e-3b56-4565-895e-7325c14d0e4a",
         "ef934c6c-a387-45ef-b532-d9ad88494ae0",
         "a6e62082-4050-4bf2-8203-d1b49624dec8",
         "5d0ce7aa-1016-4628-b3be-e9d7b9ee3dae",
@@ -1899,7 +1904,6 @@
         "a0656c52-6958-4c86-ab26-b87f36c8d7e9",
         "67f0e6c6-fa16-4a5f-86be-8aa088f0d440",
         "4e32bf98-a1ea-4099-9803-9d43cfed80c0",
-        "766912e2-cca8-455b-8e51-6e3013fb658c",
         "500cd8ab-2392-4979-a232-acb5c435337c",
         "e64d745b-7397-460d-859c-17f680e72d5b",
         "489eef58-920c-4a21-b543-24d53023c6c0",
