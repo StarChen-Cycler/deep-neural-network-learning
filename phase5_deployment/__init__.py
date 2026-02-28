@@ -16,6 +16,8 @@ Modules:
     multi_gpu: GPU detection, DataParallel wrapper, memory management
     gradient_accumulation: Memory-efficient training with gradient accumulation
     memory_optimizer: Gradient checkpointing, CPU offloading, memory-efficient attention
+    pruning: Model pruning (magnitude, channel, global, iterative)
+    pruning_experiments: Compression benchmarks and fine-tuning pipelines
 """
 
 from .ddp_training import (
@@ -122,6 +124,51 @@ from .memory_optimizer import (
     MEMORY_OPTIMIZER_COMPONENTS,
 )
 
+from .pruning import (
+    # Enums
+    PruningMethod,
+    PruningNorm,
+    # Config
+    PruningConfig,
+    # Base
+    BasePruner,
+    # Pruners
+    MagnitudePruner,
+    RandomPruner,
+    GradientPruner,
+    ChannelPruner,
+    GlobalPruner,
+    # Schedule
+    IterativePruningSchedule,
+    # Manager
+    PruningManager,
+    # Utilities
+    create_pruner,
+    prune_model,
+    get_model_sparsity,
+    count_zero_weights,
+    # Registry
+    PRUNING_COMPONENTS,
+)
+
+from .pruning_experiments import (
+    # Results
+    SparsityResult,
+    MethodResult,
+    ExperimentReport,
+    # Experiments
+    SparsitySweepExperiment,
+    MethodComparisonExperiment,
+    FineTuningPipeline,
+    CompletePruningExperiment,
+    # Utilities
+    evaluate_model,
+    measure_inference_time,
+    run_all_experiments,
+    # Registry
+    PRUNING_EXPERIMENTS_COMPONENTS,
+)
+
 __all__ = [
     # DDP Setup
     "setup_ddp",
@@ -200,4 +247,33 @@ __all__ = [
     "benchmark_memory",
     "compare_memory_strategies",
     "MEMORY_OPTIMIZER_COMPONENTS",
+    # Pruning
+    "PruningMethod",
+    "PruningNorm",
+    "PruningConfig",
+    "BasePruner",
+    "MagnitudePruner",
+    "RandomPruner",
+    "GradientPruner",
+    "ChannelPruner",
+    "GlobalPruner",
+    "IterativePruningSchedule",
+    "PruningManager",
+    "create_pruner",
+    "prune_model",
+    "get_model_sparsity",
+    "count_zero_weights",
+    "PRUNING_COMPONENTS",
+    # Pruning Experiments
+    "SparsityResult",
+    "MethodResult",
+    "ExperimentReport",
+    "SparsitySweepExperiment",
+    "MethodComparisonExperiment",
+    "FineTuningPipeline",
+    "CompletePruningExperiment",
+    "evaluate_model",
+    "measure_inference_time",
+    "run_all_experiments",
+    "PRUNING_EXPERIMENTS_COMPONENTS",
 ]
