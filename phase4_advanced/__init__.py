@@ -5,11 +5,13 @@ This module provides advanced training utilities:
     - Gradient stability and diagnostics
     - Mixed precision training (FP16/BF16/TF32)
     - Training debugging and monitoring
+    - NaN loss debugging and recovery
     - Early stopping
 
 Modules:
     gradient_stability: Gradient clipping, flow analysis, vanishing/explosion detection
     mixed_precision: AMP training, GradScaler, precision detection
+    nan_debugger: NaN detection, training stability monitoring, auto recovery
 """
 
 from .gradient_stability import (
@@ -46,6 +48,28 @@ from .mixed_precision import (
     MIXED_PRECISION_MODES,
 )
 
+from .nan_debugger import (
+    # Components
+    NaNDebugger,
+    TrainingStabilityMonitor,
+    AutoRecoveryHandler,
+    DataValidator,
+    NumericalStabilityTester,
+    # Enums
+    StabilityStatus,
+    RecoveryAction,
+    # Data classes
+    DiagnosticResult,
+    StabilityReport,
+    # Utilities
+    safe_log,
+    safe_exp,
+    safe_divide,
+    detect_anomaly,
+    get_nan_debugger,
+    NAN_DEBUGGER_COMPONENTS,
+)
+
 __all__ = [
     # Clipping
     "clip_grad_norm",
@@ -72,4 +96,20 @@ __all__ = [
     "enable_optimizations_for_small_vram",
     "get_precision_info",
     "MIXED_PRECISION_MODES",
+    # NaN Debugger
+    "NaNDebugger",
+    "TrainingStabilityMonitor",
+    "AutoRecoveryHandler",
+    "DataValidator",
+    "NumericalStabilityTester",
+    "StabilityStatus",
+    "RecoveryAction",
+    "DiagnosticResult",
+    "StabilityReport",
+    "safe_log",
+    "safe_exp",
+    "safe_divide",
+    "detect_anomaly",
+    "get_nan_debugger",
+    "NAN_DEBUGGER_COMPONENTS",
 ]
