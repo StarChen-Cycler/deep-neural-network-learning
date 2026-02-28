@@ -8,6 +8,7 @@ This module provides implementations of training techniques for deep learning:
     - LR Schedulers: Step, Exponential, Cosine, Cyclic, OneCycle, etc.
     - Transfer Learning: Pretrained models, fine-tuning strategies
     - Fine-tuning: Strategy comparison, discriminative LRs
+    - Data Augmentation: Image (Crop, Flip, Mixup, CutMix, etc.) and Text (Masking, Replacement)
 
 Modules:
     normalization: 4 normalization techniques with forward/backward
@@ -17,6 +18,8 @@ Modules:
     scheduler_comparison: Optimization comparison experiments
     transfer_learning: Transfer learning with pretrained models
     fine_tuning: Fine-tuning strategy comparison experiments
+    image_augmentation: Image augmentation (geometric, color, advanced)
+    text_augmentation: Text augmentation (token masking, replacement)
 """
 
 from .normalization import (
@@ -97,6 +100,44 @@ from .fine_tuning import (
     quick_test_transfer_learning,
 )
 
+from .image_augmentation import (
+    # Geometric
+    RandomCrop,
+    RandomHorizontalFlip,
+    RandomVerticalFlip,
+    RandomRotation,
+    # Color
+    ColorJitter,
+    # Advanced
+    Mixup,
+    CutMix,
+    RandomErasing,
+    # Composite
+    Compose,
+    # Registry
+    get_augmentation,
+    list_augmentations,
+    IMAGE_AUGMENTATIONS,
+)
+
+from .text_augmentation import (
+    # Token-level
+    TokenMasking,
+    RandomTokenMasking,
+    RandomTokenReplacement,
+    RandomTokenDeletion,
+    RandomTokenInsertion,
+    # Word-level
+    SynonymReplacement,
+    RandomSwap,
+    # Composite
+    TextAugmenter,
+    # Registry
+    get_text_augmentation,
+    list_text_augmentations,
+    TEXT_AUGMENTATIONS,
+)
+
 __all__ = [
     # Normalization
     "BatchNorm1d",
@@ -164,4 +205,29 @@ __all__ = [
     "generate_comparison_report",
     "run_full_comparison_experiment",
     "quick_test_transfer_learning",
+    # Image Augmentation
+    "RandomCrop",
+    "RandomHorizontalFlip",
+    "RandomVerticalFlip",
+    "RandomRotation",
+    "ColorJitter",
+    "Mixup",
+    "CutMix",
+    "RandomErasing",
+    "Compose",
+    "get_augmentation",
+    "list_augmentations",
+    "IMAGE_AUGMENTATIONS",
+    # Text Augmentation
+    "TokenMasking",
+    "RandomTokenMasking",
+    "RandomTokenReplacement",
+    "RandomTokenDeletion",
+    "RandomTokenInsertion",
+    "SynonymReplacement",
+    "RandomSwap",
+    "TextAugmenter",
+    "get_text_augmentation",
+    "list_text_augmentations",
+    "TEXT_AUGMENTATIONS",
 ]
