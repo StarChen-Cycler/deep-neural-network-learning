@@ -7,6 +7,7 @@ This module provides advanced training utilities:
     - Training debugging and monitoring
     - NaN loss debugging and recovery
     - TensorBoard and WandB visualization
+    - Early stopping callback
 
 Modules:
     gradient_stability: Gradient clipping, flow analysis, vanishing/explosion detection
@@ -14,6 +15,7 @@ Modules:
     nan_debugger: NaN detection, training stability monitoring, auto recovery
     training_monitor: Unified training monitoring for gradients, activations, weights
     tensorboard_debug: TensorBoard and WandB integration for PyTorch
+    early_stopping: Patience-based early stopping, best model saving
 """
 
 from .gradient_stability import (
@@ -102,6 +104,19 @@ from .tensorboard_debug import (
     TENSORBOARD_DEBUG_COMPONENTS,
 )
 
+from .early_stopping import (
+    # Callback
+    EarlyStopping,
+    EarlyStoppingConfig,
+    # Trainer
+    EarlyStoppingTrainer,
+    # Utilities
+    create_early_stopping,
+    validate_early_stopping,
+    # Constants
+    EARLY_STOPPING_COMPONENTS,
+)
+
 __all__ = [
     # Clipping
     "clip_grad_norm",
@@ -162,4 +177,11 @@ __all__ = [
     "create_monitor",
     "quick_visualize",
     "TENSORBOARD_DEBUG_COMPONENTS",
+    # Early Stopping
+    "EarlyStopping",
+    "EarlyStoppingConfig",
+    "EarlyStoppingTrainer",
+    "create_early_stopping",
+    "validate_early_stopping",
+    "EARLY_STOPPING_COMPONENTS",
 ]
