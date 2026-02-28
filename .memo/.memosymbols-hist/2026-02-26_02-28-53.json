@@ -1,0 +1,1428 @@
+{
+  "timestamp": "2026-02-26T02:28:53.414338",
+  "symbols": [
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 28,
+      "type": "variable",
+      "name": "ArrayLike"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 31,
+      "type": "function",
+      "name": "_ensure_array"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 41,
+      "type": "function",
+      "name": "sigmoid"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 65,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 67,
+      "type": "variable",
+      "name": "clipped"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 71,
+      "type": "function",
+      "name": "sigmoid_grad"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 89,
+      "type": "variable",
+      "name": "s"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 98,
+      "type": "function",
+      "name": "tanh"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 121,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 125,
+      "type": "function",
+      "name": "tanh_grad"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 143,
+      "type": "variable",
+      "name": "t"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 152,
+      "type": "function",
+      "name": "relu"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 177,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 181,
+      "type": "function",
+      "name": "relu_grad"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 200,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 209,
+      "type": "function",
+      "name": "leaky_relu"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 233,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 237,
+      "type": "function",
+      "name": "leaky_relu_grad"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 254,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 263,
+      "type": "function",
+      "name": "gelu"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 294,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 298,
+      "type": "variable",
+      "name": "sqrt_2_over_pi"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 306,
+      "type": "function",
+      "name": "gelu_grad"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 328,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 332,
+      "type": "variable",
+      "name": "sqrt_2_over_pi"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 333,
+      "type": "variable",
+      "name": "inner"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 334,
+      "type": "variable",
+      "name": "tanh_inner"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 336,
+      "type": "variable",
+      "name": "sech_squared"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 338,
+      "type": "variable",
+      "name": "d_inner"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 343,
+      "type": "variable",
+      "name": "phi_x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 344,
+      "type": "variable",
+      "name": "cdf_x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 348,
+      "type": "function",
+      "name": "_erf"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 364,
+      "type": "variable",
+      "name": "a1"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 365,
+      "type": "variable",
+      "name": "a2"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 366,
+      "type": "variable",
+      "name": "a3"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 367,
+      "type": "variable",
+      "name": "a4"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 368,
+      "type": "variable",
+      "name": "a5"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 369,
+      "type": "variable",
+      "name": "p"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 372,
+      "type": "variable",
+      "name": "sign"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 373,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 376,
+      "type": "variable",
+      "name": "t"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 377,
+      "type": "variable",
+      "name": "y"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 387,
+      "type": "function",
+      "name": "swish"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 418,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 422,
+      "type": "function",
+      "name": "swish_grad"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 441,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 442,
+      "type": "variable",
+      "name": "s"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 451,
+      "type": "function",
+      "name": "numerical_gradient"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 471,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 472,
+      "type": "variable",
+      "name": "it"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 474,
+      "type": "variable",
+      "name": "idx"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 475,
+      "type": "variable",
+      "name": "old_val"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 478,
+      "type": "variable",
+      "name": "f_plus"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 481,
+      "type": "variable",
+      "name": "f_minus"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 494,
+      "type": "variable",
+      "name": "ACTIVATIONS"
+    },
+    {
+      "file": "phase1_basics\\activations.py",
+      "line": 504,
+      "type": "function",
+      "name": "get_activation"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 19,
+      "type": "variable",
+      "name": "HAS_TORCH"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 21,
+      "type": "variable",
+      "name": "HAS_TORCH"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 47,
+      "type": "function",
+      "name": "random_input"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 54,
+      "type": "function",
+      "name": "small_input"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 64,
+      "type": "class",
+      "name": "TestSigmoid"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 67,
+      "type": "function",
+      "name": "test_sigmoid_forward_shape"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 69,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 72,
+      "type": "function",
+      "name": "test_sigmoid_output_range"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 75,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 76,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 79,
+      "type": "function",
+      "name": "test_sigmoid_at_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 83,
+      "type": "function",
+      "name": "test_sigmoid_gradient_at_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 88,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 91,
+      "type": "function",
+      "name": "test_sigmoid_gradient_numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 93,
+      "type": "variable",
+      "name": "analytical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 94,
+      "type": "variable",
+      "name": "numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 100,
+      "type": "function",
+      "name": "test_sigmoid_pytorch_comparison"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 102,
+      "type": "variable",
+      "name": "numpy_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 103,
+      "type": "variable",
+      "name": "torch_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 112,
+      "type": "class",
+      "name": "TestTanh"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 115,
+      "type": "function",
+      "name": "test_tanh_forward_shape"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 117,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 120,
+      "type": "function",
+      "name": "test_tanh_output_range"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 123,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 124,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 127,
+      "type": "function",
+      "name": "test_tanh_at_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 131,
+      "type": "function",
+      "name": "test_tanh_gradient_at_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 133,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 136,
+      "type": "function",
+      "name": "test_tanh_gradient_numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 138,
+      "type": "variable",
+      "name": "analytical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 139,
+      "type": "variable",
+      "name": "numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 143,
+      "type": "function",
+      "name": "test_tanh_pytorch_comparison"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 145,
+      "type": "variable",
+      "name": "numpy_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 146,
+      "type": "variable",
+      "name": "torch_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 155,
+      "type": "class",
+      "name": "TestReLU"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 158,
+      "type": "function",
+      "name": "test_relu_forward_shape"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 160,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 163,
+      "type": "function",
+      "name": "test_relu_positive_passthrough"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 165,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 166,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 169,
+      "type": "function",
+      "name": "test_relu_negative_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 171,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 172,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 175,
+      "type": "function",
+      "name": "test_relu_gradient_positive"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 180,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 181,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 184,
+      "type": "function",
+      "name": "test_relu_gradient_negative"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 189,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 190,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 193,
+      "type": "function",
+      "name": "test_relu_gradient_at_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 195,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 199,
+      "type": "function",
+      "name": "test_relu_gradient_numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 201,
+      "type": "variable",
+      "name": "analytical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 202,
+      "type": "variable",
+      "name": "numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 207,
+      "type": "function",
+      "name": "test_relu_pytorch_comparison"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 209,
+      "type": "variable",
+      "name": "numpy_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 210,
+      "type": "variable",
+      "name": "torch_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 219,
+      "type": "class",
+      "name": "TestLeakyReLU"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 222,
+      "type": "function",
+      "name": "test_leaky_relu_forward_shape"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 224,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 227,
+      "type": "function",
+      "name": "test_leaky_relu_positive_passthrough"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 229,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 230,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 233,
+      "type": "function",
+      "name": "test_leaky_relu_negative_scaled"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 235,
+      "type": "variable",
+      "name": "alpha"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 236,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 237,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 238,
+      "type": "variable",
+      "name": "expected"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 241,
+      "type": "function",
+      "name": "test_leaky_relu_gradient_positive"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 243,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 244,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 247,
+      "type": "function",
+      "name": "test_leaky_relu_gradient_negative"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 249,
+      "type": "variable",
+      "name": "alpha"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 250,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 251,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 254,
+      "type": "function",
+      "name": "test_leaky_relu_gradient_numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 256,
+      "type": "variable",
+      "name": "alpha"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 257,
+      "type": "variable",
+      "name": "analytical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 258,
+      "type": "variable",
+      "name": "numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 264,
+      "type": "function",
+      "name": "test_leaky_relu_pytorch_comparison"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 266,
+      "type": "variable",
+      "name": "alpha"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 267,
+      "type": "variable",
+      "name": "numpy_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 268,
+      "type": "variable",
+      "name": "torch_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 279,
+      "type": "class",
+      "name": "TestGELU"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 282,
+      "type": "function",
+      "name": "test_gelu_forward_shape"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 284,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 287,
+      "type": "function",
+      "name": "test_gelu_at_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 292,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 295,
+      "type": "function",
+      "name": "test_gelu_at_zero_exact"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 297,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 300,
+      "type": "function",
+      "name": "test_gelu_gradient_at_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 302,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 306,
+      "type": "function",
+      "name": "test_gelu_approximation_accuracy"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 308,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 309,
+      "type": "variable",
+      "name": "approx"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 310,
+      "type": "variable",
+      "name": "exact"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 313,
+      "type": "variable",
+      "name": "abs_error"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 317,
+      "type": "function",
+      "name": "test_gelu_gradient_numerical_approx"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 319,
+      "type": "variable",
+      "name": "analytical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 320,
+      "type": "variable",
+      "name": "numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 325,
+      "type": "function",
+      "name": "test_gelu_gradient_numerical_exact"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 327,
+      "type": "variable",
+      "name": "analytical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 328,
+      "type": "variable",
+      "name": "numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 334,
+      "type": "function",
+      "name": "test_gelu_pytorch_comparison"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 336,
+      "type": "variable",
+      "name": "numpy_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 337,
+      "type": "variable",
+      "name": "torch_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 348,
+      "type": "class",
+      "name": "TestSwish"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 351,
+      "type": "function",
+      "name": "test_swish_forward_shape"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 353,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 356,
+      "type": "function",
+      "name": "test_swish_at_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 360,
+      "type": "function",
+      "name": "test_swish_gradient_at_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 362,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 365,
+      "type": "function",
+      "name": "test_swish_self_gated"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 367,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 368,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 369,
+      "type": "variable",
+      "name": "expected"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 372,
+      "type": "function",
+      "name": "test_swish_gradient_numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 374,
+      "type": "variable",
+      "name": "analytical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 375,
+      "type": "variable",
+      "name": "numerical"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 379,
+      "type": "function",
+      "name": "test_swish_pytorch_comparison"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 381,
+      "type": "variable",
+      "name": "numpy_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 382,
+      "type": "variable",
+      "name": "torch_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 393,
+      "type": "class",
+      "name": "TestErf"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 396,
+      "type": "function",
+      "name": "test_erf_at_zero"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 400,
+      "type": "function",
+      "name": "test_erf_symmetry"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 402,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 405,
+      "type": "function",
+      "name": "test_erf_asymptotic_positive"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 407,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 408,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 411,
+      "type": "function",
+      "name": "test_erf_asymptotic_negative"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 413,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 414,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 417,
+      "type": "function",
+      "name": "test_erf_known_values"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 428,
+      "type": "class",
+      "name": "TestNumericalGradient"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 431,
+      "type": "function",
+      "name": "test_numerical_gradient_linear"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 433,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 434,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 437,
+      "type": "function",
+      "name": "test_numerical_gradient_quadratic"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 439,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 440,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 444,
+      "type": "function",
+      "name": "test_numerical_gradient_multidim"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 446,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 447,
+      "type": "variable",
+      "name": "grad"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 449,
+      "type": "variable",
+      "name": "expected"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 458,
+      "type": "class",
+      "name": "TestIntegration"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 461,
+      "type": "function",
+      "name": "test_all_activations_same_shape"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 463,
+      "type": "variable",
+      "name": "activations"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 465,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 470,
+      "type": "function",
+      "name": "test_all_gradients_same_shape"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 472,
+      "type": "variable",
+      "name": "gradients"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 474,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 479,
+      "type": "function",
+      "name": "test_gradient_flow_in_transformer_context"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 486,
+      "type": "variable",
+      "name": "batch_size"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 487,
+      "type": "variable",
+      "name": "hidden_dim"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 488,
+      "type": "variable",
+      "name": "ff_dim"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 491,
+      "type": "variable",
+      "name": "W1"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 492,
+      "type": "variable",
+      "name": "W2"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 493,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 496,
+      "type": "variable",
+      "name": "h1"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 497,
+      "type": "variable",
+      "name": "h1_relu"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 498,
+      "type": "variable",
+      "name": "out_relu"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 501,
+      "type": "variable",
+      "name": "h1_gelu"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 502,
+      "type": "variable",
+      "name": "out_gelu"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 505,
+      "type": "variable",
+      "name": "grad_out"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 508,
+      "type": "variable",
+      "name": "grad_h1_relu"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 509,
+      "type": "variable",
+      "name": "grad_h1_gelu"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 512,
+      "type": "variable",
+      "name": "grad_relu"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 513,
+      "type": "variable",
+      "name": "grad_gelu"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 529,
+      "type": "class",
+      "name": "TestEdgeCases"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 532,
+      "type": "function",
+      "name": "test_sigmoid_extreme_values"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 534,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 535,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 541,
+      "type": "function",
+      "name": "test_relu_extreme_values"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 543,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 544,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 547,
+      "type": "function",
+      "name": "test_gelu_extreme_values"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 549,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 550,
+      "type": "variable",
+      "name": "result"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 553,
+      "type": "function",
+      "name": "test_very_small_inputs"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 555,
+      "type": "variable",
+      "name": "x"
+    },
+    {
+      "file": "tests\\test_activations.py",
+      "line": 557,
+      "type": "variable",
+      "name": "result"
+    }
+  ],
+  "total_symbols": 237
+}

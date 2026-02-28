@@ -6,6 +6,8 @@ This module provides implementations of training techniques for deep learning:
     - Dropout: Standard, MC, Variational, Alpha, Spatial, DropConnect
     - Regularization: L1, L2, ElasticNet, MaxNorm, SpectralNorm
     - LR Schedulers: Step, Exponential, Cosine, Cyclic, OneCycle, etc.
+    - Transfer Learning: Pretrained models, fine-tuning strategies
+    - Fine-tuning: Strategy comparison, discriminative LRs
 
 Modules:
     normalization: 4 normalization techniques with forward/backward
@@ -13,6 +15,8 @@ Modules:
     regularization: Weight regularization methods
     lr_scheduler: 11 learning rate scheduling strategies
     scheduler_comparison: Optimization comparison experiments
+    transfer_learning: Transfer learning with pretrained models
+    fine_tuning: Fine-tuning strategy comparison experiments
 """
 
 from .normalization import (
@@ -69,6 +73,30 @@ from .lr_scheduler import (
     LR_SCHEDULERS,
 )
 
+from .transfer_learning import (
+    TransferLearner,
+    FineTuningStrategy,
+    freeze_backbone,
+    unfreeze_layers,
+    get_discriminative_lr_params,
+    create_layerwise_lr_groups,
+    create_resnet50_transfer,
+    train_with_transfer_learning,
+    TRANSFER_LEARNING_FUNCTIONS,
+)
+
+from .fine_tuning import (
+    create_synthetic_cifar10,
+    create_realistic_synthetic_data,
+    run_finetuning_experiment,
+    compare_finetuning_strategies,
+    run_discriminative_lr_ablation,
+    run_convergence_analysis,
+    generate_comparison_report,
+    run_full_comparison_experiment,
+    quick_test_transfer_learning,
+)
+
 __all__ = [
     # Normalization
     "BatchNorm1d",
@@ -116,4 +144,24 @@ __all__ = [
     "get_scheduler",
     "plot_learning_rate_curve",
     "LR_SCHEDULERS",
+    # Transfer Learning
+    "TransferLearner",
+    "FineTuningStrategy",
+    "freeze_backbone",
+    "unfreeze_layers",
+    "get_discriminative_lr_params",
+    "create_layerwise_lr_groups",
+    "create_resnet50_transfer",
+    "train_with_transfer_learning",
+    "TRANSFER_LEARNING_FUNCTIONS",
+    # Fine-tuning
+    "create_synthetic_cifar10",
+    "create_realistic_synthetic_data",
+    "run_finetuning_experiment",
+    "compare_finetuning_strategies",
+    "run_discriminative_lr_ablation",
+    "run_convergence_analysis",
+    "generate_comparison_report",
+    "run_full_comparison_experiment",
+    "quick_test_transfer_learning",
 ]

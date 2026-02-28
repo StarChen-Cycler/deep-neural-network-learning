@@ -6,7 +6,7 @@
     "project_name": "深度学习课件制作流程指引",
     "version": "1.0.0",
     "created_at": "2026-02-23T18:58:42.481Z",
-    "updated_at": "2026-02-28T07:44:05.699Z"
+    "updated_at": "2026-02-28T07:42:51.481Z"
   },
   "tasks": {
     "e8f83238-5483-41f8-b2e4-a86bb8474dfe": {
@@ -1462,7 +1462,7 @@
       "id": "4a205408-4d91-4d81-bac0-9c076bec42c4",
       "title": "Implement transfer learning with fine-tuning",
       "description": "实现迁移学习微调技术。包含预训练模型加载、特征提取、微调策略(freeze/partial/unfreeze)、学习率调度、逐层学习率。",
-      "status": "completed",
+      "status": "in_progress",
       "priority": "top",
       "success_criteria": [
         {
@@ -1488,12 +1488,12 @@
         {
           "id": "a95f03db-becc-4ec6-b1a8-13c6b1ee36d6",
           "text": "transfer_learning.py - 迁移学习实现",
-          "completed": true
+          "completed": false
         },
         {
           "id": "2bea0f95-dc81-4371-b678-6da08bf78683",
           "text": "fine_tuning.py - 微调策略对比",
-          "completed": true
+          "completed": false
         }
       ],
       "need_fix": [],
@@ -1502,11 +1502,11 @@
       "dependencies": "",
       "sub_items": [],
       "related_files": [],
-      "notes": "Phase 3/5: Training + Compression - Transfer Learning\n\nImplemented TransferLearner class with pretrained ResNet50 support, freeze/unfreeze strategies, and discriminative learning rates. Created FineTuningStrategy manager with freeze/partial/full/discriminative strategies. Added fine_tuning.py with strategy comparison experiments, discriminative LR ablation, and convergence analysis. All tests pass including forward pass shape verification, freeze/unfreeze parameter counting, and parameter group creation.",
+      "notes": "Phase 3/5: Training + Compression - Transfer Learning",
       "c7_verified": [],
       "created_at": "2026-02-23T19:20:48.842Z",
-      "updated_at": "2026-02-28T07:44:05.699Z",
-      "completed_at": "2026-02-28T07:43:24.373Z",
+      "updated_at": "2026-02-28T07:42:51.481Z",
+      "completed_at": null,
       "edges": [
         "4e32bf98-a1ea-4099-9803-9d43cfed80c0"
       ]
@@ -1872,7 +1872,9 @@
   "indexes": {
     "byStatus": {
       "ready": [],
-      "in_progress": [],
+      "in_progress": [
+        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+      ],
       "in_review": [
         "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
         "51c17488-6174-42c3-98cd-ebdb4e934d27"
@@ -1887,8 +1889,7 @@
         "2383c31b-d5db-4959-bda4-59c70403b1fd",
         "55130997-4a33-422e-a3f2-6e669f19b246",
         "9570a925-ab3e-4575-9ec8-38f2490064a1",
-        "98c84ab1-3da6-490a-bd95-174a2a8e064f",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "98c84ab1-3da6-490a-bd95-174a2a8e064f"
       ],
       "blocked": [
         "c65e901e-3b56-4565-895e-7325c14d0e4a",
@@ -2426,8 +2427,7 @@
         "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
         "98c84ab1-3da6-490a-bd95-174a2a8e064f",
-        "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "8ec5f2d7-021f-4c93-bbe0-a8473550042c"
       ],
       "in": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
@@ -2451,8 +2451,7 @@
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
         "98c84ab1-3da6-490a-bd95-174a2a8e064f",
-        "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "8ec5f2d7-021f-4c93-bbe0-a8473550042c"
       ],
       "tests": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
@@ -2460,8 +2459,7 @@
         "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-        "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "8ec5f2d7-021f-4c93-bbe0-a8473550042c"
       ],
       "test_activations": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe"
@@ -2471,8 +2469,7 @@
         "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-        "5d0ce7aa-1016-4628-b3be-e9d7b9ee3dae",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "5d0ce7aa-1016-4628-b3be-e9d7b9ee3dae"
       ],
       "pass": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
@@ -2480,25 +2477,21 @@
         "9fb23832-b728-4243-aa2f-41c3bf0bbf55",
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
         "98c84ab1-3da6-490a-bd95-174a2a8e064f",
-        "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "8ec5f2d7-021f-4c93-bbe0-a8473550042c"
       ],
       "including": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
         "4258a342-056d-460e-9713-e90b446818b1",
-        "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "8a9c3d66-8694-4a88-97fb-e84f824a6964"
       ],
       "verification": [
         "e8f83238-5483-41f8-b2e4-a86bb8474dfe",
-        "4258a342-056d-460e-9713-e90b446818b1",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "4258a342-056d-460e-9713-e90b446818b1"
       ],
       "forward": [
         "4258a342-056d-460e-9713-e90b446818b1",
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-        "98c84ab1-3da6-490a-bd95-174a2a8e064f",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "98c84ab1-3da6-490a-bd95-174a2a8e064f"
       ],
       "and": [
         "4258a342-056d-460e-9713-e90b446818b1",
@@ -2508,7 +2501,6 @@
         "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
         "c65e901e-3b56-4565-895e-7325c14d0e4a",
         "7be5a818-7e9a-47b0-a247-208860d7cd91",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4",
         "5e4e3be5-f6bf-4b3b-8fce-dae440eb57b8",
         "903e7750-5c5d-4a3f-a8cc-d33375145ce6"
       ],
@@ -2577,8 +2569,7 @@
       ],
       "shape": [
         "4258a342-056d-460e-9713-e90b446818b1",
-        "8a9c3d66-8694-4a88-97fb-e84f824a6964",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "8a9c3d66-8694-4a88-97fb-e84f824a6964"
       ],
       "test": [
         "4258a342-056d-460e-9713-e90b446818b1",
@@ -2645,8 +2636,7 @@
       ],
       "created": [
         "4258a342-056d-460e-9713-e90b446818b1",
-        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
       ],
       "mlp": [
         "4258a342-056d-460e-9713-e90b446818b1"
@@ -2666,8 +2656,7 @@
         "8a9c3d66-8694-4a88-97fb-e84f824a6964",
         "9570a925-ab3e-4575-9ec8-38f2490064a1",
         "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
-        "51c17488-6174-42c3-98cd-ebdb4e934d27",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "51c17488-6174-42c3-98cd-ebdb4e934d27"
       ],
       "triggering": [
         "4258a342-056d-460e-9713-e90b446818b1"
@@ -2780,7 +2769,6 @@
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "8ec5f2d7-021f-4c93-bbe0-a8473550042c",
         "c65e901e-3b56-4565-895e-7325c14d0e4a",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4",
         "5e4e3be5-f6bf-4b3b-8fce-dae440eb57b8"
       ],
       "001": [
@@ -2795,15 +2783,13 @@
         "8ec5f2d7-021f-4c93-bbe0-a8473550042c"
       ],
       "experiments": [
-        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
       ],
       "optimizer_comparison": [
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
       ],
       "convergence": [
-        "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
       ],
       "on": [
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
@@ -2911,8 +2897,7 @@
       "full": [
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6",
         "96ebe8c9-8234-4141-9aab-ce09da3ab596",
-        "51c17488-6174-42c3-98cd-ebdb4e934d27",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "51c17488-6174-42c3-98cd-ebdb4e934d27"
       ],
       "mathematical": [
         "72f63d5d-aa09-418e-8d6e-4bf0476251a6"
@@ -3535,8 +3520,7 @@
         "98c84ab1-3da6-490a-bd95-174a2a8e064f"
       ],
       "parameter": [
-        "98c84ab1-3da6-490a-bd95-174a2a8e064f",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "98c84ab1-3da6-490a-bd95-174a2a8e064f"
       ],
       "reduction": [
         "98c84ab1-3da6-490a-bd95-174a2a8e064f",
@@ -4069,8 +4053,7 @@
         "500cd8ab-2392-4979-a232-acb5c435337c"
       ],
       "resnet50": [
-        "500cd8ab-2392-4979-a232-acb5c435337c",
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
+        "500cd8ab-2392-4979-a232-acb5c435337c"
       ],
       "api": [
         "500cd8ab-2392-4979-a232-acb5c435337c"
@@ -4152,57 +4135,6 @@
         "4a205408-4d91-4d81-bac0-9c076bec42c4"
       ],
       "unfreeze": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "transferlearner": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "class": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "pretrained": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "support": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "strategies": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "discriminative": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "rates": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "finetuningstrategy": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "manager": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "added": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "fine_tuning": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "strategy": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "ablation": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "analysis": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "counting": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "group": [
-        "4a205408-4d91-4d81-bac0-9c076bec42c4"
-      ],
-      "creation": [
         "4a205408-4d91-4d81-bac0-9c076bec42c4"
       ],
       "debug": [
