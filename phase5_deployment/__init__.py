@@ -248,6 +248,40 @@ from .resume_training import (
     RESUME_TRAINING_COMPONENTS,
 )
 
+from .onnx_export import (
+    # Enums
+    OpsetVersion,
+    ExportMode,
+    # Config
+    DynamicAxis,
+    ONNXExportConfig,
+    # Exporter
+    ONNXExporter,
+    # Utilities
+    export_to_onnx,
+    export_resnet_to_onnx,
+    export_transformer_to_onnx,
+    # Registry
+    ONNX_EXPORT_COMPONENTS,
+)
+
+from .onnx_inference import (
+    # Enums
+    ExecutionProvider,
+    GraphOptimization,
+    # Config
+    InferenceConfig,
+    # Inference
+    ONNXInference,
+    # Benchmark
+    InferenceBenchmark,
+    # Utilities
+    load_onnx_model,
+    benchmark_pytorch_vs_onnx,
+    # Registry
+    ONNX_INFERENCE_COMPONENTS,
+)
+
 __all__ = [
     # DDP Setup
     "setup_ddp",
@@ -375,4 +409,23 @@ __all__ = [
     "train_mnist_with_checkpoint",
     "verify_checkpoint_resume_consistency",
     "RESUME_TRAINING_COMPONENTS",
+    # ONNX Export
+    "OpsetVersion",
+    "ExportMode",
+    "DynamicAxis",
+    "ONNXExportConfig",
+    "ONNXExporter",
+    "export_to_onnx",
+    "export_resnet_to_onnx",
+    "export_transformer_to_onnx",
+    "ONNX_EXPORT_COMPONENTS",
+    # ONNX Inference
+    "ExecutionProvider",
+    "GraphOptimization",
+    "InferenceConfig",
+    "ONNXInference",
+    "InferenceBenchmark",
+    "load_onnx_model",
+    "benchmark_pytorch_vs_onnx",
+    "ONNX_INFERENCE_COMPONENTS",
 ]
