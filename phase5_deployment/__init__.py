@@ -282,6 +282,45 @@ from .onnx_inference import (
     ONNX_INFERENCE_COMPONENTS,
 )
 
+from .distillation import (
+    # Enums
+    DistillationType,
+    TemperatureSchedule,
+    # Config
+    DistillationConfig,
+    # Losses
+    DistillationLoss,
+    FeatureDistillationLoss,
+    # Extractors
+    FeatureExtractor,
+    # Distiller
+    KnowledgeDistiller,
+    # Utilities
+    create_distiller,
+    distill_model,
+    search_temperature,
+    # Registry
+    DISTILLATION_COMPONENTS,
+)
+
+from .distillation_experiments import (
+    # Config
+    TeacherStudentConfig,
+    ExperimentConfig,
+    # Results
+    DistillationResult,
+    ExperimentReport,
+    # Experiments
+    DistillationExperiment,
+    # Comparison
+    CompressionComparison,
+    # Utilities
+    run_distillation_experiment,
+    compare_teacher_student,
+    # Registry
+    DISTILLATION_EXPERIMENTS_COMPONENTS,
+)
+
 __all__ = [
     # DDP Setup
     "setup_ddp",
@@ -428,4 +467,26 @@ __all__ = [
     "load_onnx_model",
     "benchmark_pytorch_vs_onnx",
     "ONNX_INFERENCE_COMPONENTS",
+    # Distillation
+    "DistillationType",
+    "TemperatureSchedule",
+    "DistillationConfig",
+    "DistillationLoss",
+    "FeatureDistillationLoss",
+    "FeatureExtractor",
+    "KnowledgeDistiller",
+    "create_distiller",
+    "distill_model",
+    "search_temperature",
+    "DISTILLATION_COMPONENTS",
+    # Distillation Experiments
+    "TeacherStudentConfig",
+    "ExperimentConfig",
+    "DistillationResult",
+    "ExperimentReport",
+    "DistillationExperiment",
+    "CompressionComparison",
+    "run_distillation_experiment",
+    "compare_teacher_student",
+    "DISTILLATION_EXPERIMENTS_COMPONENTS",
 ]
