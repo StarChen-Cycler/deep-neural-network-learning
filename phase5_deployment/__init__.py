@@ -9,7 +9,7 @@ This module provides optimization and deployment utilities:
     - Model pruning and quantization
     - ONNX export
     - TensorRT optimization
-    - Edge deployment
+    - Edge deployment (NCNN, Core ML)
 
 Modules:
     ddp_training: DDP setup, DistributedTrainer, gradient sync verification
@@ -18,6 +18,15 @@ Modules:
     memory_optimizer: Gradient checkpointing, CPU offloading, memory-efficient attention
     pruning: Model pruning (magnitude, channel, global, iterative)
     pruning_experiments: Compression benchmarks and fine-tuning pipelines
+    quantization: Model quantization (dynamic, static, QAT, INT4)
+    checkpoint_manager: Checkpoint save/load, training resume
+    resume_training: Resume training pipeline with MNIST example
+    onnx_export: ONNX model export utilities
+    onnx_inference: ONNX Runtime inference and benchmarking
+    distillation: Knowledge distillation for model compression
+    distillation_experiments: Distillation experiments and comparison
+    tensorrt_inference: TensorRT FP16/INT8 inference acceleration
+    mobile_deployment: NCNN/Core ML deployment for mobile devices
 """
 
 from .ddp_training import (
@@ -321,6 +330,58 @@ from .distillation_experiments import (
     DISTILLATION_EXPERIMENTS_COMPONENTS,
 )
 
+from .tensorrt_inference import (
+    # Enums
+    PrecisionMode,
+    CalibrationAlgorithm,
+    # Config
+    TensorRTConfig,
+    # Results
+    InferenceResult,
+    # Calibrators
+    EntropyCalibrator2,
+    MinMaxCalibrator,
+    # Engine
+    TensorRTEngine,
+    # Benchmark
+    TensorRTBenchmark,
+    # Utilities
+    build_tensorrt_engine,
+    tensorrt_inference,
+    # Availability
+    HAS_TENSORRT,
+    HAS_PYCUDA,
+    # Registry
+    TENSORRT_COMPONENTS,
+)
+
+from .mobile_deployment import (
+    # Enums
+    MobilePlatform,
+    QuantizationLevel,
+    # Config
+    MobileDeploymentConfig,
+    # Results
+    MobileInferenceResult,
+    # Converters
+    ONNXToNCNNConverter,
+    NCNNInference,
+    CoreMLExporter,
+    CoreMLInference,
+    # Manager
+    MobileDeploymentManager,
+    # Utilities
+    convert_to_ncnn,
+    convert_to_coreml,
+    benchmark_mobile_deployment,
+    generate_android_jni_interface,
+    # Availability
+    HAS_NCNN,
+    HAS_COREML,
+    # Registry
+    MOBILE_DEPLOYMENT_COMPONENTS,
+)
+
 __all__ = [
     # DDP Setup
     "setup_ddp",
@@ -489,4 +550,35 @@ __all__ = [
     "run_distillation_experiment",
     "compare_teacher_student",
     "DISTILLATION_EXPERIMENTS_COMPONENTS",
+    # TensorRT Inference
+    "PrecisionMode",
+    "CalibrationAlgorithm",
+    "TensorRTConfig",
+    "InferenceResult",
+    "EntropyCalibrator2",
+    "MinMaxCalibrator",
+    "TensorRTEngine",
+    "TensorRTBenchmark",
+    "build_tensorrt_engine",
+    "tensorrt_inference",
+    "HAS_TENSORRT",
+    "HAS_PYCUDA",
+    "TENSORRT_COMPONENTS",
+    # Mobile Deployment
+    "MobilePlatform",
+    "QuantizationLevel",
+    "MobileDeploymentConfig",
+    "MobileInferenceResult",
+    "ONNXToNCNNConverter",
+    "NCNNInference",
+    "CoreMLExporter",
+    "CoreMLInference",
+    "MobileDeploymentManager",
+    "convert_to_ncnn",
+    "convert_to_coreml",
+    "benchmark_mobile_deployment",
+    "generate_android_jni_interface",
+    "HAS_NCNN",
+    "HAS_COREML",
+    "MOBILE_DEPLOYMENT_COMPONENTS",
 ]
